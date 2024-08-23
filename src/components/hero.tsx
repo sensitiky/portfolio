@@ -1,16 +1,12 @@
-import React, { Suspense, lazy } from "react";
-
-const Spline = lazy(() => import("@splinetool/react-spline/next"));
+import React from "react";
+import Spline from "@splinetool/react-spline/next";
 
 export default function Hero() {
   return (
     <div className="relative flex flex-col items-center justify-center h-screen mb-[10rem] overflow-visible">
-      <Suspense fallback={<div>Loading...</div>}>
-        <Spline
-          scene="https://prod.spline.design/EFC-xs6iBKv5BfPc/scene.splinecode"
-          className="absolute inset-0 w-auto h-auto z-0"
-        />
-      </Suspense>
+      <div className="absolute w-full h-full">
+        <Spline scene="https://prod.spline.design/Jc0YqdXPPm1Bpx0Y/scene.splinecode" />
+      </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
         <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bold">
           Mario Correa
