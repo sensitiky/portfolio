@@ -5,7 +5,6 @@ const ICONS = [
   { src: "kotlin.svg", name: "Kotlin" },
   { src: "javascript.svg", name: "JavaScript" },
   { src: "typescript.svg", name: "TypeScript" },
-  // Agrega más iconos según sea necesario
 ];
 
 const Frameworks = [
@@ -30,8 +29,8 @@ const fm = "Frameworks";
 const tools = "Tools";
 export default function Skills() {
   return (
-    <div className="w-full h-screen flex items-center justify-center text-white flex-col">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
+    <div className="w-full h-screen flex items-center justify-center text-white flex-col flex-wrap">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4 flex-wrap">
         <h2 className="text-[1.5rem] text-white font-medium text-">
           {h2}
           <div className="flex flex-row">
@@ -47,7 +46,7 @@ export default function Skills() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-5 md:grid-cols-5 lg:grid-cols-5 gap-4 m-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 m-4 flex-wrap">
         <h2 className="text-[1.5rem] text-white font-medium text-">
           {fm}
           <div className="flex flex-row">
@@ -63,7 +62,7 @@ export default function Skills() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-7 md:grid-cols-7 lg:grid-cols-7 gap-4 m-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 m-4 flex-wrap">
         <h2 className="text-[1.5rem] text-white font-medium text-">
           {tools}
           <div className="flex flex-row">

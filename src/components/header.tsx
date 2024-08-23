@@ -1,6 +1,26 @@
 import Link from "next/link";
+import { FloatingNav } from "./ui/floating-navbar";
+import { HomeIcon, UserIcon, WorkflowIcon } from "lucide-react";
+
 
 const Texto = "<MC />";
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <HomeIcon className="h-4 w-4 text-white" />,
+  },
+  {
+    name: "Projects",
+    link: "#Projects",
+    icon: <WorkflowIcon className="h-4 w-4  text-white" />,
+  },
+  {
+    name: "About",
+    link: "#about",
+    icon: <UserIcon className="h-4 w-4 text-white" />,
+  },
+];
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-4 px-8">
@@ -23,6 +43,7 @@ export default function Header() {
           </Link>
         </ul>
       </nav>
+      <FloatingNav navItems={navItems} />
     </header>
   );
 }
