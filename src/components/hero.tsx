@@ -12,7 +12,7 @@ export default function Hero() {
         </h1>
         <div className="text-white flex items-center flex-col">
           <h1 className="mr-2 flex-row flex text-5xl md:text-7xl lg:text-8xl">
-            Full Stack
+            Software
           </h1>
           <div className="flex items-center ml-0 md:ml-[5rem] lg:ml-[10rem]">
             <span className="m-4 text-5xl md:text-7xl lg:text-8xl">
