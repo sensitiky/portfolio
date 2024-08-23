@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <div
       id="Projects"
-      className="flex flex-col items-center justify-center h-full"
+      className="flex flex-col items-center justify-center h-full m-4"
     >
       <h2 className="text-[2rem] text-white justify-center">Projects</h2>
       <Parallax />

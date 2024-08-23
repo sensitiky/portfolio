@@ -134,14 +134,14 @@ export default function Parallax() {
                 className="max-w-full max-h-full object-cover rounded-lg shadow-lg"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="hover:backdrop-blur-sm bg-opacity-50 p-4 rounded-lg">
+                <div className="hover:bg-primary/30 bg-opacity-50 p-4 rounded-full">
                   <Link
                     href={work.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-2 py-1 md:px-4 md:py-2 rounded transition-colors"
                   >
-                    <Button className="bg-primary text-white hover:bg-primary/80 rounded-full text-sm md:text-base">
+                    <Button className="bg-primary text-white hover:bg-primary/90 rounded-full text-sm md:text-base border border-white">
                       Live Demo
                     </Button>
                   </Link>
@@ -151,7 +151,7 @@ export default function Parallax() {
                     rel="noopener noreferrer"
                     className="px-2 py-1 md:px-4 md:py-2 rounded transition-colors"
                   >
-                    <Button className="bg-primary text-white hover:bg-primary/80 rounded-full text-sm md:text-base">
+                    <Button className="bg-primary text-white hover:bg-primary/90 rounded-full text-sm md:text-base border border-white">
                       GitHub
                     </Button>
                   </Link>
@@ -166,7 +166,7 @@ export default function Parallax() {
         className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 transition-transform"
         style={{
           transform: isDesktop
-            ? `translateY(calc(${desktopActiveIndex} * 100vh - 50vh))`
+            ? `translateY(calc(${desktopActiveIndex} * 100vh - 50vh))` // + 50 vh por cada proyecto
             : `translateY(0)`,
         }}
       >

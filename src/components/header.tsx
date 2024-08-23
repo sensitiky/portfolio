@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FloatingNav } from "./ui/floating-navbar";
 import { HomeIcon, UserIcon, WorkflowIcon } from "lucide-react";
-
+import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 
 const Texto = "<MC />";
 const navItems = [
@@ -40,6 +40,17 @@ export default function Header() {
               alt="Linkedin Logo"
               className="size-[3rem]"
             />
+          </Link>
+          <Link href="mailto:mariomcorrea3@gmail.com" aria-label="Email">
+            <AiOutlineMail className="size-[3rem] mt-1 text-white" />
+          </Link>
+          <Link
+            href="CV-Correa Mario .pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download PDF"
+          >
+            <AiOutlineFilePdf className="size-[3rem] mt-1  text-white" />
           </Link>
         </ul>
       </nav>
