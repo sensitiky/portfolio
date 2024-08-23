@@ -70,7 +70,20 @@ const works = [
 
 export default function Parallax() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [desktopActiveIndex, setDesktopActiveIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
   const refs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     refs.current = refs.current.slice(0, works.length);
@@ -78,7 +91,11 @@ export default function Parallax() {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setActiveIndex(index);
+            if (isDesktop) {
+              setDesktopActiveIndex(index);
+            } else {
+              setActiveIndex(index);
+            }
           }
         },
         { threshold: 0.5 }
@@ -94,10 +111,13 @@ export default function Parallax() {
     return () => {
       observers.forEach((observer) => observer.disconnect());
     };
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen overflow-hidden m-4">
+      <div className="justify-center flex block sm:hidden">
+        <h3 className="text-white">¡Slide!</h3>
+      </div>
       <div className="w-full md:w-1/2 relative scroll-container mb-8 md:mb-0">
         <div className="h-[50vh] md:h-full overflow-y-scroll snap-y snap-mandatory custom-scrollbar">
           {works.map((work, index) => (
@@ -145,15 +165,17 @@ export default function Parallax() {
         id="text-container"
         className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 transition-transform"
         style={{
-          transform: `translateY(calc(${activeIndex} * 100vh - 50vh))`,
+          transform: isDesktop
+            ? `translateY(calc(${desktopActiveIndex} * 100vh - 50vh))`
+            : `translateY(0)`,
         }}
       >
         <div className="max-w-md">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-            {works[activeIndex].title}
+            {works[isDesktop ? desktopActiveIndex : activeIndex].title}
           </h2>
           <p className="text-base md:text-lg text-gray-100">
-            {works[activeIndex].description}
+            {works[isDesktop ? desktopActiveIndex : activeIndex].description}
           </p>
         </div>
       </div>
