@@ -70,12 +70,11 @@ const works = [
 
 export default function Parallax() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-  const refs = useRef(works.map(() => useRef(null)));
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const refs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observers = refs.current.map((ref, index) => {
+    refs.current = refs.current.slice(0, works.length);
+    const observers = works.map((_, index) => {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -85,47 +84,28 @@ export default function Parallax() {
         { threshold: 0.5 }
       );
 
-      if (ref.current) {
-        observer.observe(ref.current);
+      if (refs.current[index]) {
+        observer.observe(refs.current[index] as HTMLDivElement);
       }
 
       return observer;
     });
 
-    const handleScroll = () => {
-      if (scrollContainerRef.current) {
-        const { scrollTop, scrollHeight, clientHeight } =
-          scrollContainerRef.current;
-        const newScrollPercentage =
-          (scrollTop / (scrollHeight - clientHeight)) * 100;
-        setScrollPercentage(newScrollPercentage);
-      }
-    };
-
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleScroll);
-    }
-
     return () => {
       observers.forEach((observer) => observer.disconnect());
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("scroll", handleScroll);
-      }
     };
   }, []);
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen overflow-hidden m-4">
       <div className="w-full md:w-1/2 relative scroll-container mb-8 md:mb-0">
-        <div
-          ref={scrollContainerRef}
-          className="h-[50vh] md:h-full overflow-y-scroll snap-y snap-mandatory custom-scrollbar"
-        >
+        <div className="h-[50vh] md:h-full overflow-y-scroll snap-y snap-mandatory custom-scrollbar">
           {works.map((work, index) => (
             <div
               key={work.title}
-              ref={refs.current[index]}
+              ref={(el) => {
+                refs.current[index] = el;
+              }}
               className="h-[50vh] md:h-screen snap-start flex items-center justify-center p-4 md:p-8 group relative"
             >
               <img
@@ -160,14 +140,14 @@ export default function Parallax() {
             </div>
           ))}
         </div>
-        <div className="scroll-track">
-          <div
-            className="scroll-thumb"
-            style={{ height: "20px", top: `${scrollPercentage}%` }}
-          />
-        </div>
       </div>
-      <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8">
+      <div
+        id="text-container"
+        className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 transition-transform"
+        style={{
+          transform: `translateY(calc(${activeIndex} * 100vh - 50vh))`,
+        }}
+      >
         <div className="max-w-md">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
             {works[activeIndex].title}
