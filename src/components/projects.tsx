@@ -2,13 +2,15 @@ import Parallax from "./scroll";
 
 export default function Projects() {
   return (
-    <div
+    <section
       id="Projects"
-      className="flex flex-col items-center justify-center h-full m-4"
+      className="flex flex-col items-center justify-center h-full py-8 px-4"
     >
-      <h2 className="text-[2rem] text-white justify-center">Projects</h2>
+      <h2 className="text-2xl md:text-4xl text-white text-center mb-8">
+        Projects
+      </h2>
       <Parallax />
-      <div className="w-3/4 border border-[#a6a6a6]"></div>
-    </div>
+      <div className="w-3/4 border-t border-[#a6a6a6] mt-8"></div>
+    </section>
   );
 }
