@@ -29,7 +29,7 @@ const fm = "Frameworks";
 const tools = "Tools";
 export default function Skills() {
   return (
-    <div className="w-full h-screen flex items-center justify-center text-white flex-col flex-wrap">
+    <div className="h-screen flex items-center justify-center text-white flex-col flex-wrap">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4 flex-wrap">
         <h2 className="text-[1.5rem] text-white font-medium text-">
           {h2}

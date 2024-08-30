@@ -70,7 +70,6 @@ const works = [
 
 export default function Parallax() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [desktopActiveIndex, setDesktopActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -87,37 +86,29 @@ export default function Parallax() {
 
   useEffect(() => {
     refs.current = refs.current.slice(0, works.length);
-    const observers = works.map((_, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (isDesktop) {
-              setDesktopActiveIndex(index);
-            } else {
+            const index = refs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) {
               setActiveIndex(index);
             }
           }
-        },
-        { threshold: 0.5 }
-      );
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-      if (refs.current[index]) {
-        observer.observe(refs.current[index] as HTMLDivElement);
-      }
-
-      return observer;
-    });
+    refs.current.forEach((ref) => ref && observer.observe(ref));
 
     return () => {
-      observers.forEach((observer) => observer.disconnect());
+      observer.disconnect();
     };
   }, [isDesktop]);
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen overflow-hidden m-4">
-      <div className="justify-center flex block sm:hidden">
-        <h3 className="text-white">¡Slide!</h3>
-      </div>
       <div className="w-full md:w-1/2 relative scroll-container mb-8 md:mb-0">
         <div className="h-[50vh] md:h-full overflow-y-scroll snap-y snap-mandatory custom-scrollbar">
           {works.map((work, index) => (
@@ -134,7 +125,7 @@ export default function Parallax() {
                 className="max-w-full max-h-full object-cover rounded-lg shadow-lg"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="hover:bg-primary/30 bg-opacity-50 p-4 rounded-full">
+                <div className="p-4 rounded-full">
                   <Link
                     href={work.liveUrl}
                     target="_blank"
@@ -161,21 +152,22 @@ export default function Parallax() {
           ))}
         </div>
       </div>
+      <h3 className="text-white flex justify-center mb-4">¡Slide!</h3>
       <div
         id="text-container"
         className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 transition-transform"
         style={{
           transform: isDesktop
-            ? `translateY(calc(${desktopActiveIndex} * 100vh - 50vh))` // + 50 vh por cada proyecto
+            ? `translateY(calc(${activeIndex} * 100vh - 50vh))` //+50vh por proyecto
             : `translateY(0)`,
         }}
       >
         <div className="max-w-md">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-            {works[isDesktop ? desktopActiveIndex : activeIndex].title}
+            {works[activeIndex].title}
           </h2>
           <p className="text-base md:text-lg text-gray-100">
-            {works[isDesktop ? desktopActiveIndex : activeIndex].description}
+            {works[activeIndex].description}
           </p>
         </div>
       </div>
