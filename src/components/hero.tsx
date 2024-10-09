@@ -1,20 +1,18 @@
-import React from "react";
-import { Button } from "./ui/button";
-import Link from "next/link";
+import React from 'react';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center h-screen overflow-visible">
       <div className="absolute inset-0 w-full h-full"></div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bold">
           Mario Correa
         </h1>
         <div className="text-white flex flex-col items-center mt-4 md:mt-6 lg:mt-8">
-          <h2 className="flex flex-row items-center text-5xl md:text-7xl lg:text-8xl">
-            Software
-          </h2>
-          <div className="flex items-center ml-0 md:ml-[5rem] lg:ml-[10rem]">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl">Software</h2>
+          <div className="flex items-center justify-center">
             <span className="m-4 text-5xl md:text-7xl lg:text-8xl">
               Developer
             </span>

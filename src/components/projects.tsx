@@ -1,4 +1,4 @@
-import Parallax from "./scroll";
+import Scroll from './scroll';
 
 export default function Projects() {
   return (
@@ -9,7 +9,7 @@ export default function Projects() {
       <h2 className="text-2xl md:text-4xl text-white text-center mb-8">
         Projects
       </h2>
-      <Parallax />
+      <Scroll />
       <div className="w-3/4 border-t border-[#a6a6a6] mt-8"></div>
     </section>
   );
