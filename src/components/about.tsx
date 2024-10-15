@@ -1,18 +1,23 @@
-import Skills from "./icons";
+import Skills from './icons';
 
-export default function About() {
+interface AboutProps {
+  language: 'en' | 'es';
+}
+
+export default function About({ language }: AboutProps) {
+  const translations = {
+    en: 'Skills',
+    es: 'Habilidades',
+  };
+
   return (
-    <section
-      id="about"
-      className="flex flex-col items-center justify-center py-8 px-4"
-    >
+    <section id="about" className="flex flex-col justify-center">
       <div className="text-center">
-        <h1 className="text-[2rem] text-white font-bold mb-4">Skills</h1>
-        <p className="text-white text-[1rem] mb-8">
-          Developer, designer, and creator.
-        </p>
+        <h1 className="text-[2rem] text-white font-bold mb-4">
+          {translations[language]}
+        </h1>
       </div>
-      <Skills />
+      <Skills language={language} />
     </section>
   );
 }
