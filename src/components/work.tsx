@@ -58,7 +58,7 @@ const works = [
     ],
   },
   {
-    image: '/iesa.png?height=300&width=400',
+    image: '/iesa.png',
     liveUrl: 'https://www.iesaeducativo.com/',
     githubUrl: 'https://github.com/sensitiky/IESA-WEB',
     technologies: [
@@ -77,42 +77,60 @@ export default function Work({ language }: WorkProps) {
 
   return (
     <div className="text-white py-8 px-4 sm:px-6 lg:px-8 flex justify-end">
-      <div className="mx-auto grid grid-cols-1 gap-8">
+      <div className="mx-auto grid grid-cols-1 gap-8 max-w-4xl">
         {works.map((work, index) => (
-          <div key={index} className="relative group">
+          <div
+            key={index}
+            className="relative group overflow-hidden rounded-lg"
+          >
             <Image
               src={work.image}
               alt={t.works[index].title}
               width={1920}
               height={1080}
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover w-full h-auto"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center rounded-lg">
-              <h2 className="text-2xl font-bold mb-4 text-white">
-                {t.works[index].title}
-              </h2>
-              <p className="text-gray-300 mb-4">{t.works[index].description}</p>
-              <div className="flex flex-wrap gap-2 mb-6 justify-center">
-                {work.technologies.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center bg-gray-700 text-gray-300 rounded-full px-3 py-1"
-                  >
-                    <tech.icon className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{tech.name}</span>
-                  </div>
-                ))}
+            <div className="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col p-4 text-center rounded-lg items-center justify-center">
+              <div className="flex flex-col items-center">
+                <h2
+                  className="text-white mb-1"
+                  style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }}
+                >
+                  {t.works[index].title}
+                </h2>
+                <p
+                  className="text-gray-300 mb-2 leading-tight"
+                  style={{ fontSize: 'clamp(0.8rem, 2vw, 1.2rem)' }}
+                >
+                  {t.works[index].description}
+                </p>
+                <div className="flex flex-wrap gap-1 mb-2 justify-center">
+                  {work.technologies.map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="flex items-center bg-gray-700 text-gray-300 rounded-full px-1.5 py-0.5"
+                    >
+                      <tech.icon className="w-4 h-4 mr-1" />
+                      <span className="text-xs">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-2 ">
                 <Button
                   asChild
                   variant="default"
-                  className="w-full sm:w-auto rounded-full border border-white"
+                  className="rounded-full border border-white"
+                  style={{
+                    padding:
+                      'clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 1rem)',
+                  }}
                 >
                   <Link
                     href={work.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{ fontSize: 'clamp(0.6rem, 1vw, 1rem)' }}
                   >
                     {t.liveDemo}
                   </Link>
@@ -120,14 +138,20 @@ export default function Work({ language }: WorkProps) {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full text-black hover:bg-inherit/80 sm:w-auto rounded-full border border-black"
+                  className="rounded-full border border-black text-black hover:bg-inherit/80"
+                  style={{
+                    padding:
+                      'clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 3rem)',
+                  }}
                 >
                   <Link
                     href={work.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center"
+                    style={{ fontSize: 'clamp(0.6rem, 1vw, 1rem)' }}
                   >
-                    <SiGithub className="text-black mr-2 size-6" />
+                    <SiGithub className="mr-1" />
                     {t.github}
                   </Link>
                 </Button>

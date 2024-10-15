@@ -54,7 +54,7 @@ export default function Skills({ language }: SkillsProps) {
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
             </div>
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 justify-items-center">
             {ICONS.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
