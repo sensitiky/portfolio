@@ -7,6 +7,7 @@ const ICONS = [
 ];
 
 const Frameworks = [
+  { src: 'jetpack.png', name: 'JetPack Compose' },
   { src: 'spring.svg', name: 'Spring' },
   { src: 'nextdotjs.svg', name: 'NextJS' },
   { src: 'nestjs.svg', name: 'NestJS' },
@@ -22,39 +23,23 @@ const Tools = [
   { src: 'aws.svg', name: 'AWS' },
 ];
 
-const translations = {
-  en: {
-    languages: 'Languages',
-    frameworks: 'Frameworks',
-    tools: 'Tools',
-  },
-  es: {
-    languages: 'Lenguajes',
-    frameworks: 'Frameworks',
-    tools: 'Herramientas',
-  },
-};
+const languages = 'Languages';
+const t = { frameworks: 'Frameworks', tools: 'Tools' };
 
-interface SkillsProps {
-  language: 'en' | 'es';
-}
-
-export default function Skills({ language }: SkillsProps) {
-  const t = translations[language];
-
+export default function AboutSkills() {
   return (
     <div className="flex flex-col items-center justify-center text-white overflow-x-hidden sm:overflow-x-visible">
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:w-full items-center justify-center">
-        <div className="flex-shrink-0 sm:flex-shrink m-4 w-full sm:w-auto">
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center m-4 w-full sm:w-auto">
           <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
-            {t.languages}
+            {languages}
             <div className="flex flex-row">
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
               <div className="rounded-full border border-[#a6a6a6] w-2 h-2 m-1"></div>
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
             </div>
           </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-4 items-center">
             {ICONS.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
@@ -64,7 +49,7 @@ export default function Skills({ language }: SkillsProps) {
           </div>
         </div>
 
-        <div className="flex-shrink-0 sm:flex-shrink m-4 w-full sm:w-auto">
+        <div className="flex flex-col items-center m-4 w-full sm:w-auto">
           <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
             {t.frameworks}
             <div className="flex flex-row">
@@ -73,7 +58,7 @@ export default function Skills({ language }: SkillsProps) {
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
             </div>
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4 items-center">
             {Frameworks.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
@@ -83,7 +68,7 @@ export default function Skills({ language }: SkillsProps) {
           </div>
         </div>
 
-        <div className="flex-shrink-0 sm:flex-shrink m-4 w-full sm:w-auto">
+        <div className="flex flex-col items-center m-4 w-full sm:w-auto">
           <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
             {t.tools}
             <div className="flex flex-row">
@@ -92,7 +77,7 @@ export default function Skills({ language }: SkillsProps) {
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
             </div>
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-4 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-4 items-center">
             {Tools.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
