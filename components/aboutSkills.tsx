@@ -28,10 +28,10 @@ const t = { frameworks: 'Frameworks', tools: 'Tools' };
 
 export default function AboutSkills() {
   return (
-    <div className="flex flex-col items-center justify-center text-white overflow-x-hidden sm:overflow-x-visible">
+    <div className="flex flex-col items-center justify-center  overflow-x-hidden sm:overflow-x-visible">
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-col items-center m-4 w-full sm:w-auto">
-          <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
+          <h2 className="text-[1.5rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-medium flex flex-col items-center">
             {languages}
             <div className="flex flex-row">
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
@@ -43,14 +43,16 @@ export default function AboutSkills() {
             {ICONS.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
-                <span className="mt-2">{icon.name}</span>
+                <span className="mt-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+                  {icon.name}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="flex flex-col items-center m-4 w-full sm:w-auto">
-          <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
+          <h2 className="text-[1.5rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-medium flex flex-col items-center">
             {t.frameworks}
             <div className="flex flex-row">
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
@@ -62,14 +64,16 @@ export default function AboutSkills() {
             {Frameworks.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
-                <span className="mt-2">{icon.name}</span>
+                <span className="mt-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+                  {icon.name}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="flex flex-col items-center m-4 w-full sm:w-auto">
-          <h2 className="text-[1.5rem] text-white font-medium flex flex-col items-center">
+          <h2 className="text-[1.5rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-medium flex flex-col items-center">
             {t.tools}
             <div className="flex flex-row">
               <div className="rounded-full bg-[#a6a6a6] w-2 h-2 m-1"></div>
@@ -81,7 +85,9 @@ export default function AboutSkills() {
             {Tools.map((icon, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img src={icon.src} alt={icon.name} className="w-16 h-16" />
-                <span className="mt-2">{icon.name}</span>
+                <span className="mt-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+                  {icon.name}
+                </span>
               </div>
             ))}
           </div>

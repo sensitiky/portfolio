@@ -7,6 +7,7 @@ import { SiGooglechrome } from 'react-icons/si';
 import { Button } from './button';
 import Link from 'next/link';
 import { Url } from 'next/dist/shared/lib/router/router';
+import Image from 'next/image';
 
 type Card = {
   id: number;
@@ -70,16 +71,22 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.img
+    <motion.div
       layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      height="500"
-      width="500"
       className={cn(
         'object-cover object-top absolute inset-0 h-full w-full transition duration-200'
       )}
-      alt="thumbnail"
-    />
+    >
+      <Image
+        src={card.thumbnail}
+        height="1920"
+        width="1080"
+        className="h-full w-full object-cover antialiased"
+        alt="thumbnail"
+        priority
+        unoptimized
+      />
+    </motion.div>
   );
 };
 
@@ -93,7 +100,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black opacity-70 z-10"
       />
       <motion.div
         layoutId={`content-${selected?.id}`}
@@ -115,16 +122,21 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         className="relative px-8 pb-4 z-[70]"
       >
-        <p className="font-bold md:text-4xl text-xl text-white">
+        <p className="italic font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 bg-opacity-50">
           {selected?.title}
         </p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
           {selected?.description}
         </p>
-        <p className="font-medium text-white text-xl">Technologies</p>
+        <p className="font-medium bg-clip-text text-neutral-100  text-xl">
+          Technologies
+        </p>
         <p className="flex gap-2 text-base font-normal">
           {selected?.technologies.map((tech, index) => (
-            <span key={index} className="flex flex-row items-center gap-2 m-1">
+            <span
+              key={index}
+              className="flex flex-row items-center gap-2 m-1 text-neutral-200"
+            >
               {selected.techIcons[index]}
               {tech}
             </span>
@@ -137,8 +149,8 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           </Button>
         </Link>
         <Link href={selected?.liveDemoLink as Url}>
-          <Button className="rounded-full text-primary bg-primary-foreground border-primary border hover:bg-primary-foreground/80">
-            <SiGooglechrome className="mr-2 text-primary" size={20} />
+          <Button className="rounded-full border-white border">
+            <SiGooglechrome className="mr-2" size={20} />
             Live Demo
           </Button>
         </Link>
