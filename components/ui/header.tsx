@@ -1,122 +1,47 @@
-'use client';
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { HeaderProps } from '@/constants/interface';
 import {
-  AiFillGithub,
+  AiFillCode,
+  AiFillFolder,
   AiFillHome,
-  AiFillLinkedin,
-  AiOutlineFilePdf,
-  AiOutlineMail,
-  AiOutlineProject,
-  AiOutlineTool,
+  AiFillWechatWork,
 } from 'react-icons/ai';
+import { CgWorkAlt } from 'react-icons/cg';
 
-const socialLinks = () => [
-  {
-    href: 'https://github.com/sensitiky',
-    icon: (
-      <AiFillGithub className="size-10" style={{ fill: 'url(#gradient)' }} />
-    ),
-    alt: 'Github',
-  },
-  {
-    href: 'https://www.linkedin.com/in/mario-correa-45324b237/',
-    icon: (
-      <AiFillLinkedin className="size-10" style={{ fill: 'url(#gradient)' }} />
-    ),
-    alt: 'Linkedin',
-  },
-  {
-    href: 'mailto:mariomcorrea3@gmail.com',
-    icon: (
-      <AiOutlineMail className="size-10" style={{ fill: 'url(#gradient)' }} />
-    ),
-    ariaLabel: 'Email',
-  },
-  {
-    href: 'CV-Correa Mario.pdf',
-    icon: (
-      <AiOutlineFilePdf
-        className="size-10 "
-        style={{ fill: 'url(#gradient)' }}
-      />
-    ),
-    ariaLabel: 'Resume',
-  },
-];
-
-export default function Header() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const controlHeader = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the header
-        setIsVisible(false);
-      } else {
-        // if scroll up show the header
-        setIsVisible(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlHeader);
-
-      return () => {
-        window.removeEventListener('scroll', controlHeader);
-      };
-    }
-  }, [lastScrollY]);
-
-  const handleLinkClick = () => {
-    setIsVisible(false);
+export default function Header({ onSelectSection }: HeaderProps) {
+  const handleLinkClick = (section: string) => {
+    onSelectSection(section);
   };
 
   return (
-    <header
-      className={`flex m-2 p-[2px] gap-2 justify-between fixed z-50 items-center rounded-full border-transparent bg-clip-border bg-gradient-to-b from-neutral-50 to-neutral-400 transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
-      <div className="flex bg-black rounded-full p-2">
-        <Link href="#home" title="Home" onClick={handleLinkClick}>
-          <AiFillHome className="size-10 " style={{ fill: 'url(#gradient)' }} />
+    <header className="flex p-[2px] justify-between z-50 items-center rounded-full border-transparent bg-clip-border bg-gradient-to-b from-neutral-50 to-neutral-400 transition-transform duration-300">
+      <div className="flex bg-black rounded-full p-2 items-center gap-2">
+        <Link href="#home" title="Home" onClick={() => handleLinkClick('Home')}>
+          <span className="items-center flex-row flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 text-xl font-bold">
+            <AiFillHome style={{ fill: 'url(#gradient)' }} /> Home
+          </span>
         </Link>
-        <Link href="#Work" title="Work" onClick={handleLinkClick}>
-          <AiOutlineProject
-            className="size-10"
-            style={{ fill: 'url(#gradient)' }}
-          />
+        <Link href="#Work" title="Work" onClick={() => handleLinkClick('Work')}>
+          <span className="items-center flex-row flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 text-xl font-bold">
+            <AiFillFolder style={{ fill: 'url(#gradient)' }} /> Projects
+          </span>
         </Link>
-        <Link href="#Skills" title="Skills" onClick={handleLinkClick}>
-          <AiOutlineTool
-            className="size-10"
-            style={{ fill: 'url(#gradient)' }}
-          />
+        <Link
+          href="#Skills"
+          title="Skills"
+          onClick={() => handleLinkClick('Skills')}
+        >
+          <span className="items-center flex-row flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 text-xl font-bold">
+            <AiFillCode style={{ fill: 'url(#gradient)' }} /> Skills
+          </span>
         </Link>
-        {socialLinks().map(({ href, icon, alt, ariaLabel }, index) => (
-          <nav key={index}>
-            <Link
-              href={href}
-              aria-label={ariaLabel || alt}
-              title={ariaLabel || alt}
-              onClick={handleLinkClick}
-            >
-              {icon}
-            </Link>
-          </nav>
-        ))}
-        <svg width="0" height="0">
-          <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
-            <stop stopColor="#fafafa" offset="0%" />
-            <stop stopColor="#737373" offset="100%" />
-          </linearGradient>
-        </svg>
       </div>
+      <svg width="0" height="0">
+        <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#fafafa" offset="0%" />
+          <stop stopColor="#737373" offset="100%" />
+        </linearGradient>
+      </svg>
     </header>
   );
 }
