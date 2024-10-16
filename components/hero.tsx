@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { MdMarkEmailUnread } from 'react-icons/md';
-import { SiDotenv } from 'react-icons/si';
-import { Dot } from 'lucide-react';
 
 export default function Hero() {
   return (
