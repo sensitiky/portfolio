@@ -26,7 +26,7 @@ const socialLinks = () => [
     ariaLabel: 'Email',
   },
   {
-    href: 'CV-Correa Mario English.pdf',
+    href: 'CV-Correa Mario.pdf',
     icon: <AiOutlineFilePdf className="size-14 text-white" />,
     ariaLabel: 'Download PDF',
   },
