@@ -1,12 +1,6 @@
 import Link from 'next/link';
 import { HeaderProps } from '@/constants/interface';
-import {
-  AiFillCode,
-  AiFillFolder,
-  AiFillHome,
-  AiFillWechatWork,
-} from 'react-icons/ai';
-import { CgWorkAlt } from 'react-icons/cg';
+import { AiFillCode, AiFillFolder, AiFillHome } from 'react-icons/ai';
 
 export default function Header({ onSelectSection }: HeaderProps) {
   const handleLinkClick = (section: string) => {
