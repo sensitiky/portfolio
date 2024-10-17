@@ -13,6 +13,14 @@ import {
 const SkeletonOne = () => {
   return (
     <div>
+      <div className="items-center flex justify-center">
+        <img
+          src="/blogchain.gif"
+          width={280}
+          height={300}
+          className="rounded-lg"
+        />
+      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Blockchain Article Platform
       </p>
@@ -22,20 +30,32 @@ const SkeletonOne = () => {
         related to blockchain technology. <br />
         Credentials: User: usuario, Password: tester123
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 items-center">
         <SiNextdotjs
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          NextJS
+        </span>
         <SiNestjs style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          NestJS
+        </span>
         <SiTypescript
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          TypeScript
+        </span>
         <SiPostgresql
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          PostgreSQL{' '}
+        </span>{' '}
       </div>
       <Link href="https://github.com/sensitiky/pwa-blockchain-articles">
         <Button className="rounded-full mr-2" variant="gradientBorder">
@@ -66,6 +86,9 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
+      <div className="items-center flex justify-center">
+        <img src="/iesa.gif" width={300} height={300} className="rounded-lg" />
+      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Educational Portal
       </p>
@@ -74,15 +97,21 @@ const SkeletonTwo = () => {
         A single-page application providing academic information for the IESA
         institute located in Posadas, Misiones, Argentina.
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 items-center">
         <SiNextdotjs
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          NextJS
+        </span>
         <SiTypescript
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          TypeScript
+        </span>
       </div>
       <Link href="https://github.com/sensitiky/SPA-university">
         <Button className="rounded-full mr-2" variant="gradientBorder">
@@ -113,6 +142,14 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
+      <div className="items-center flex justify-center">
+        <img
+          src="/taskHand.gif"
+          width={300}
+          height={300}
+          className="rounded-lg"
+        />
+      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Task Management App
       </p>
@@ -121,12 +158,18 @@ const SkeletonThree = () => {
         A Kotlin-based application for managing tasks and habits, featuring user
         authentication, ads, and statistics.
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 items-center">
         <SiKotlin style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          Kotlin{' '}
+        </span>{' '}
         <SiJetpackcompose
           style={{ fill: 'url(#gradient)' }}
           className="size-6 m-2"
         />
+        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          Jetpack Compose{' '}
+        </span>{' '}
       </div>
       <Link href="https://github.com/sensitiky/mobile-task.habit-management">
         <Button className="rounded-full mr-2" variant="gradientBorder">
