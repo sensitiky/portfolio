@@ -1,7 +1,6 @@
 'use client';
 import Hero from '@/components/hero';
 import Skills from '@/components/skills';
-import Footer from '@/components/ui/footer';
 import Header from '@/components/ui/header';
 import WorkSection from '@/components/work';
 import { useState } from 'react';

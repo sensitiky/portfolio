@@ -174,7 +174,7 @@ const SkeletonFour = () => {
         Your Project Can Be Here!
       </p>
       <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-        Yes, you! Showcase your amazing project in this place. Don't be shy, the
+        Yes, you! Showcase your amazing project in this place. Dont be shy, the
         world is waiting for our collaboration!
       </p>
       <Link href="mailto:mariomcorrea3@gmail.com">
