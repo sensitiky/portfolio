@@ -1,42 +1,193 @@
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { AiFillChrome, AiFillGithub } from 'react-icons/ai';
 import {
+  SiJetpackcompose,
+  SiKotlin,
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
   SiTypescript,
 } from 'react-icons/si';
 
+const SkeletonOne = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Blockchain Article Platform
+      </p>
+      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        A multi-page application designed for creating and sharing articles
+        related to blockchain technology. <br />
+        Credentials: User: usuario, Password: tester123
+      </p>
+      <div className="flex flex-row gap-2">
+        <SiNextdotjs
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+        <SiNestjs style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
+        <SiTypescript
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+        <SiPostgresql
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+      </div>
+      <Link href="https://github.com/sensitiky/pwa-blockchain-articles">
+        <Button className="rounded-full mr-2" variant="gradientBorder">
+          <AiFillGithub
+            className="size-6 mr-2"
+            style={{ fill: 'url(#gradient)' }}
+          />{' '}
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            GitHub
+          </span>
+        </Button>
+      </Link>
+      <Link href="https://www.blogchain.tech/">
+        <Button className="rounded-full" variant="gradientBorder">
+          <AiFillChrome
+            className="size-6 mr-2"
+            style={{ fill: 'url(#gradient)' }}
+          />
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            Live Demo
+          </span>
+        </Button>
+      </Link>
+    </div>
+  );
+};
+
+const SkeletonTwo = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Educational Portal
+      </p>
+      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        A single-page application providing academic information for the IESA
+        institute located in Posadas, Misiones, Argentina.
+      </p>
+      <div className="flex flex-row gap-2">
+        <SiNextdotjs
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+        <SiTypescript
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+      </div>
+      <Link href="https://github.com/sensitiky/SPA-university">
+        <Button className="rounded-full mr-2" variant="gradientBorder">
+          <AiFillGithub
+            className="size-6 mr-2"
+            style={{ fill: 'url(#gradient)' }}
+          />{' '}
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            GitHub
+          </span>
+        </Button>
+      </Link>
+      <Link href="https://iesaeducativo.com/">
+        <Button className="rounded-full" variant="gradientBorder">
+          <AiFillChrome
+            className="size-6 mr-2"
+            style={{ fill: 'url(#gradient)' }}
+          />
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            Live Demo
+          </span>
+        </Button>
+      </Link>
+    </div>
+  );
+};
+
+const SkeletonThree = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Task Management App
+      </p>
+      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        A Kotlin-based application for managing tasks and habits, featuring user
+        authentication, ads, and statistics.
+      </p>
+      <div className="flex flex-row gap-2">
+        <SiKotlin style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
+        <SiJetpackcompose
+          style={{ fill: 'url(#gradient)' }}
+          className="size-6 m-2"
+        />
+      </div>
+      <Link href="https://github.com/sensitiky/mobile-task.habit-management">
+        <Button className="rounded-full mr-2" variant="gradientBorder">
+          <AiFillGithub
+            className="size-6 mr-2"
+            style={{ fill: 'url(#gradient)' }}
+          />{' '}
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            GitHub
+          </span>
+        </Button>
+      </Link>
+    </div>
+  );
+};
+
+const SkeletonFour = () => {
+  return (
+    <div className="flex flex-col items-center justify-center h-full">
+      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Your Project Can Be Here!
+      </p>
+      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        Yes, you! Showcase your amazing project in this place. Don't be shy, the
+        world is waiting for our collaboration!
+      </p>
+      <Link href="mailto:mariomcorrea3@gmail.com">
+        <Button className="rounded-full mt-4" variant="gradientBorder">
+          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+            Contact Me
+          </span>
+        </Button>
+      </Link>
+    </div>
+  );
+};
+
 export const cards = [
   {
     id: 1,
-    title: 'Project Blogchain',
-    description:
-      'A PWA dedicated to creating articles related to blockchain. Credentials: User: usuario, Password: tester123',
-    technologies: ['NextJS', 'NestJS', 'TypeScript', 'PostgreSQL'],
-    techIcons: [
-      <SiNextdotjs style={{ fill: 'url(#gradient)' }} />,
-      <SiNestjs style={{ fill: 'url(#gradient)' }} />,
-      <SiTypescript style={{ fill: 'url(#gradient)' }} />,
-      <SiPostgresql style={{ fill: 'url(#gradient)' }} />,
-    ],
-    githubLink: 'https://github.com/sensitiky/pwa-blockchain-articles',
-    liveDemoLink: 'https://www.blogchain.tech/',
+    content: <SkeletonOne />,
     className: 'md:col-span-1',
     thumbnail: '/blogchain.gif',
   },
   {
     id: 2,
-    title: 'Project IESA',
-    description:
-      'SPA dedicated to the academic information of the IESA institute located in Posadas, Misiones, Argentina.',
-    technologies: ['NextJS', 'TypeScript'],
-    techIcons: [
-      <SiNextdotjs style={{ fill: 'url(#gradient)' }} />,
-      <SiTypescript style={{ fill: 'url(#gradient)' }} />,
-    ],
-    githubLink: 'https://github.com/sensitiky/SPA-university',
-    liveDemoLink: 'https://iesaeducativo.com/',
+    content: <SkeletonTwo />,
     className: 'col-span-1',
     thumbnail: '/iesa.gif',
+  },
+  {
+    id: 3,
+    content: <SkeletonThree />,
+    className: 'md:row-span-2',
+    thumbnail: '/taskHand.gif',
+  },
+  {
+    id: 4,
+    content: <SkeletonFour />,
+    className: 'md:col-span-2',
+    thumbnail: 'https://placehold.co/800?text=Hello+World&font=roboto',
   },
 ];
 <svg width="0" height="0">

@@ -2,21 +2,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { AiFillGithub } from 'react-icons/ai';
-import { SiGooglechrome } from 'react-icons/si';
-import { Button } from './button';
-import Link from 'next/link';
-import { Url } from 'next/dist/shared/lib/router/router';
-import Image from 'next/image';
 
 type Card = {
   id: number;
-  title: string;
-  description: string;
-  technologies: string[];
-  techIcons: JSX.Element[];
-  githubLink: string;
-  liveDemoLink: string;
+  content: JSX.Element | React.ReactNode | string;
   className: string;
   thumbnail: string;
 };
@@ -36,7 +25,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 row-span-2 col-span-2 max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, '')}>
           <motion.div
@@ -60,7 +49,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          'absolute h-full w-full left-0 top-0 opacity-0 z-10',
+          'absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10',
           selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
@@ -71,36 +60,30 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.div
+    <motion.img
       layoutId={`image-${card.id}-image`}
+      src={card.thumbnail}
+      height="500"
+      width="500"
       className={cn(
-        'object-cover object-top absolute inset-0 h-full w-full transition duration-200'
+        'object-contain object-center absolute inset-0 h-full w-full transition duration-200'
       )}
-    >
-      <Image
-        src={card.thumbnail}
-        height="1920"
-        width="1080"
-        className="h-full w-full object-cover antialiased"
-        alt="thumbnail"
-        priority
-        unoptimized
-      />
-    </motion.div>
+      alt="thumbnail"
+    />
   );
 };
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60] items-center">
+    <div className="bg-transparent backdrop-blur-lg h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,
         }}
         animate={{
-          opacity: 0.6,
+          opacity: 0.9,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-70 z-10"
+        className="absolute inset-0 h-full w-full bg-black  opacity-60 z-10"
       />
       <motion.div
         layoutId={`content-${selected?.id}`}
@@ -122,38 +105,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         className="relative px-8 pb-4 z-[70]"
       >
-        <p className="italic font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 bg-opacity-50">
-          {selected?.title}
-        </p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          {selected?.description}
-        </p>
-        <p className="font-medium bg-clip-text text-neutral-100  text-xl">
-          Technologies
-        </p>
-        <p className="flex gap-2 text-base font-normal">
-          {selected?.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="flex flex-row items-center gap-2 m-1 text-neutral-200"
-            >
-              {selected.techIcons[index]}
-              {tech}
-            </span>
-          ))}
-        </p>
-        <Link href={selected?.githubLink as Url}>
-          <Button className="rounded-full border-white border mr-2">
-            <AiFillGithub size={20} className="mr-2" />
-            Github
-          </Button>
-        </Link>
-        <Link href={selected?.liveDemoLink as Url}>
-          <Button className="rounded-full border-white border">
-            <SiGooglechrome className="mr-2" size={20} />
-            Live Demo
-          </Button>
-        </Link>
+        {selected?.content}
       </motion.div>
     </div>
   );
