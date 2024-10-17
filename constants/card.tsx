@@ -168,7 +168,7 @@ export const cards = [
   {
     id: 1,
     content: <SkeletonOne />,
-    className: 'md:col-span-1',
+    className: 'col-span-1',
     thumbnail: '/blogchain.gif',
   },
   {
@@ -180,13 +180,13 @@ export const cards = [
   {
     id: 3,
     content: <SkeletonThree />,
-    className: 'md:row-span-2',
+    className: 'row-span-1 md:row-span-2',
     thumbnail: '/taskHand.gif',
   },
   {
     id: 4,
     content: <SkeletonFour />,
-    className: 'md:col-span-2',
+    className: 'col-span-1 md:col-span-2',
     thumbnail: 'https://placehold.co/800?text=Hello+World&font=roboto',
   },
 ];
