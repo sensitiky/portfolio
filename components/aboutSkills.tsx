@@ -28,9 +28,9 @@ const t = { frameworks: 'Frameworks', tools: 'Tools' };
 
 export default function AboutSkills() {
   return (
-    <div className="flex flex-col items-center justify-center  overflow-x-hidden sm:overflow-x-visible">
+    <div className="flex flex-col items-center overflow-x-hidden sm:overflow-x-visible">
       <div className="flex flex-col items-center justify-center w-full">
-        <div className="flex flex-col items-center m-4 w-full sm:w-auto">
+        <div className="flex flex-col items-center w-full sm:w-auto">
           <h2 className="text-[1.5rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 font-medium flex flex-col items-center">
             {languages}
             <div className="flex flex-row">

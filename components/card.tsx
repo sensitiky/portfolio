@@ -12,174 +12,180 @@ import {
 
 const SkeletonOne = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+    <div className="p-4 md:p-0">
+      <p className="font-bold text-lg md:text-xl 2xl:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Blockchain Article Platform
       </p>
-      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
-      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+      <p className="font-bold text-sm md:text-base  text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-xs md:text-sm 2xl:text-xl my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
         A multi-page application designed for creating and sharing articles
         related to blockchain technology. <br />
         Credentials: User: usuario, Password: tester123
       </p>
-      <div className="flex flex-row gap-2 items-center">
+      <div className="flex flex-wrap gap-2 items-center">
         <SiNextdotjs
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
           NextJS
         </span>
-        <SiNestjs style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        <SiNestjs style={{ fill: 'url(#gradient)' }} className="w-6 h-6 mr-1" />
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
           NestJS
         </span>
         <SiTypescript
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
           TypeScript
         </span>
         <SiPostgresql
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-          PostgreSQL{' '}
-        </span>{' '}
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          PostgreSQL
+        </span>
       </div>
-      <Link href="https://github.com/sensitiky/pwa-blockchain-articles">
-        <Button className="rounded-full mr-2" variant="gradientBorder">
-          <AiFillGithub
-            className="size-6 mr-2"
-            style={{ fill: 'url(#gradient)' }}
-          />{' '}
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-            GitHub
-          </span>
-        </Button>
-      </Link>
-      <Link href="https://www.blogchain.tech/">
-        <Button className="rounded-full" variant="gradientBorder">
-          <AiFillChrome
-            className="size-6 mr-2"
-            style={{ fill: 'url(#gradient)' }}
-          />
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-            Live Demo
-          </span>
-        </Button>
-      </Link>
+      <div className="flex flex-wrap gap-2 mt-4">
+        <Link href="https://github.com/sensitiky/pwa-blockchain-articles">
+          <Button className="rounded-full mr-1" variant="gradientBorder">
+            <AiFillGithub
+              className="w-6 h-6 mr-1"
+              style={{ fill: 'url(#gradient)' }}
+            />
+            <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+              GitHub
+            </span>
+          </Button>
+        </Link>
+        <Link href="https://www.blogchain.tech/">
+          <Button className="rounded-full" variant="gradientBorder">
+            <AiFillChrome
+              className="w-6 h-6 mr-1"
+              style={{ fill: 'url(#gradient)' }}
+            />
+            <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+              Live Demo
+            </span>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const SkeletonTwo = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+    <div className="p-4 md:p-0">
+      <p className="font-bold text-lg md:text-xl 2xl:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Educational Portal
       </p>
-      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
-      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+      <p className="font-bold text-sm md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-xs md:text-base 2xl:text-xl my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
         A single-page application providing academic information for the IESA
         institute located in Posadas, Misiones, Argentina.
       </p>
-      <div className="flex flex-row gap-2 items-center">
+      <div className="flex flex-wrap gap-2 items-center">
         <SiNextdotjs
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
           NextJS
         </span>
         <SiTypescript
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
           TypeScript
         </span>
       </div>
-      <Link href="https://github.com/sensitiky/SPA-university">
-        <Button className="rounded-full mr-2" variant="gradientBorder">
-          <AiFillGithub
-            className="size-6 mr-2"
-            style={{ fill: 'url(#gradient)' }}
-          />{' '}
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-            GitHub
-          </span>
-        </Button>
-      </Link>
-      <Link href="https://iesaeducativo.com/">
-        <Button className="rounded-full" variant="gradientBorder">
-          <AiFillChrome
-            className="size-6 mr-2"
-            style={{ fill: 'url(#gradient)' }}
-          />
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-            Live Demo
-          </span>
-        </Button>
-      </Link>
+      <div className="flex flex-wrap gap-2 mt-4">
+        <Link href="https://github.com/sensitiky/SPA-university">
+          <Button className="rounded-full mr-1" variant="gradientBorder">
+            <AiFillGithub
+              className="w-6 h-6 mr-1"
+              style={{ fill: 'url(#gradient)' }}
+            />
+            <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+              GitHub
+            </span>
+          </Button>
+        </Link>
+        <Link href="https://iesaeducativo.com/">
+          <Button className="rounded-full" variant="gradientBorder">
+            <AiFillChrome
+              className="w-6 h-6 mr-1"
+              style={{ fill: 'url(#gradient)' }}
+            />
+            <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+              Live Demo
+            </span>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const SkeletonThree = () => {
   return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+    <div className="p-4 md:p-0">
+      <p className="font-bold text-lg md:text-lg 2xl:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Task Management App
       </p>
-      <p className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
-      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+      <p className="font-bold text-sm md:text-base 2xl:text-xl text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"></p>
+      <p className="font-bold text-xs md:text-base 2xl-text-xl my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
         A Kotlin-based application for managing tasks and habits, featuring user
         authentication, ads, and statistics.
       </p>
-      <div className="flex flex-row gap-2 items-center">
-        <SiKotlin style={{ fill: 'url(#gradient)' }} className="size-6 m-2" />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-          Kotlin{' '}
-        </span>{' '}
+      <div className="flex flex-wrap gap-2 items-center">
+        <SiKotlin style={{ fill: 'url(#gradient)' }} className="w-6 h-6 mr-1" />
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          Kotlin
+        </span>
         <SiJetpackcompose
           style={{ fill: 'url(#gradient)' }}
-          className="size-6 m-2"
+          className="w-6 h-6 mr-1"
         />
-        <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-          Jetpack Compose{' '}
-        </span>{' '}
+        <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          Jetpack Compose
+        </span>
       </div>
-      <Link href="https://github.com/sensitiky/mobile-task.habit-management">
-        <Button className="rounded-full mr-2" variant="gradientBorder">
-          <AiFillGithub
-            className="size-6 mr-2"
-            style={{ fill: 'url(#gradient)' }}
-          />{' '}
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
-            GitHub
-          </span>
-        </Button>
-      </Link>
+      <div className="flex flex-wrap gap-2 mt-4">
+        <Link href="https://github.com/sensitiky/mobile-task.habit-management">
+          <Button className="rounded-full mr-1" variant="gradientBorder">
+            <AiFillGithub
+              className="w-6 h-6 mr-1"
+              style={{ fill: 'url(#gradient)' }}
+            />
+            <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+              GitHub
+            </span>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const SkeletonFour = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
-      <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+    <div className="flex flex-col items-center justify-center h-full p-4 md:p-0">
+      <p className="font-bold text-lg md:text-4xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Your Project Can Be Here!
       </p>
-      <p className="font-bold text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+      <p className="font-bold text-xs md:text-base my-4 max-w-lg text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
         Yes, you! Showcase your amazing project in this place. Dont be shy, the
         world is waiting for our collaboration!
       </p>
       <Link href="mailto:mariomcorrea3@gmail.com">
         <Button className="rounded-full mt-4" variant="gradientBorder">
-          <span className="font-bold text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
+          <span className="font-bold text-xs md:text-base text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 bg-clip-text">
             Contact Me
           </span>
         </Button>

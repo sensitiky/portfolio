@@ -81,9 +81,9 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           opacity: 0,
         }}
         animate={{
-          opacity: 0.9,
+          opacity: 0.89,
         }}
-        className="absolute inset-0 h-full w-full bg-black  opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black z-10"
       />
       <motion.div
         layoutId={`content-${selected?.id}`}
@@ -103,7 +103,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: 'easeInOut',
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative px-4 pb-4 z-[70]"
       >
         {selected?.content}
       </motion.div>
