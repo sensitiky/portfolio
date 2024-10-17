@@ -13,14 +13,6 @@ import {
 const SkeletonOne = () => {
   return (
     <div>
-      <div className="items-center flex justify-center">
-        <img
-          src="/blogchain.gif"
-          width={280}
-          height={300}
-          className="rounded-lg"
-        />
-      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Blockchain Article Platform
       </p>
@@ -86,9 +78,6 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <div className="items-center flex justify-center">
-        <img src="/iesa.gif" width={300} height={300} className="rounded-lg" />
-      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Educational Portal
       </p>
@@ -142,14 +131,6 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <div className="items-center flex justify-center">
-        <img
-          src="/taskHand.gif"
-          width={300}
-          height={300}
-          className="rounded-lg"
-        />
-      </div>
       <p className="font-bold md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Task Management App
       </p>
@@ -230,7 +211,7 @@ export const cards = [
     id: 4,
     content: <SkeletonFour />,
     className: 'col-span-1 md:col-span-2',
-    thumbnail: 'https://placehold.co/800?text=Hello+World&font=roboto',
+    thumbnail: '/thumbnail.png',
   },
 ];
 <svg width="0" height="0">

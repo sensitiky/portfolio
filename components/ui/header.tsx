@@ -9,10 +9,11 @@ export default function Header({ onSelectSection }: HeaderProps) {
 
   return (
     <header className="flex p-[2px] justify-between z-50 items-center rounded-full border-transparent bg-clip-border bg-gradient-to-b from-neutral-50 to-neutral-400 transition-transform duration-300">
-      <div className="flex bg-black rounded-full p-2 items-center gap-2">
+      <div className="flex bg-black rounded-full p-2 items-center gap-6">
         <Link href="#home" title="Home" onClick={() => handleLinkClick('Home')}>
           <span className="items-center flex-row flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 text-xl font-bold">
-            <AiFillHome style={{ fill: 'url(#gradient)' }} /> Home
+            <AiFillHome style={{ fill: 'url(#gradient)' }} className="mb-1" />{' '}
+            Home
           </span>
         </Link>
         <Link href="#Work" title="Work" onClick={() => handleLinkClick('Work')}>

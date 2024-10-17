@@ -7,6 +7,7 @@ import {
   AiOutlineFilePdf,
   AiOutlineMail,
 } from 'react-icons/ai';
+import Footer from './ui/footer';
 
 const socialLinks = () => [
   {
@@ -43,9 +44,9 @@ const socialLinks = () => [
 ];
 export default function Hero() {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col justify-between h-[90vh]">
       <div className="md:mt-40 mb-2 w-full rounded-md flex flex-col md:flex-row md:items-start md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
-        <div className="p-4 max-w-7xl mx-auto relative z-10 pt-20 md:pt-0">
+        <div className="p-4 max-w-7xl relative z-10 pt-20 md:pt-0">
           <h1 className="text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Mario
             <br /> Correa
@@ -99,6 +100,9 @@ export default function Hero() {
             className="size-96"
           />
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
