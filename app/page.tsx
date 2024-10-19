@@ -100,7 +100,7 @@ export default function Home() {
         <article className="col-span-full md:col-span-2 bg-gradient-to-tr from-[#5a5a5e] to-[#ece6e6] rounded-xl flex flex-col justify-evenly p-4">
           <div>
             <h1 className="font-bold text-2xl md:text-4xl mb-4">
-              Hello, I'm Mario, a backend & mobile Developer
+              Hello, I&apos;m Mario, a backend & mobile Developer
             </h1>
             <h3 className="text-lg md:text-xl font-semibold">
               Deeply passionate about three things: technology, development and
