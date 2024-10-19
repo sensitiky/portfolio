@@ -3,7 +3,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'Mario Correa | Portfolio',
+  title: 'Mario Correa',
   description: 'Portfolio to showcase work & skills',
 };
 
