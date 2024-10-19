@@ -4,12 +4,9 @@ import Hero from '@/components/hero';
 import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 import { Button } from '@/components/ui/button';
-import { Dot } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
-  AiFillChrome,
   AiFillCiCircle,
   AiFillCloseCircle,
   AiFillFilePdf,
