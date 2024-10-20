@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
           Feel free to reach out for collaborations or just a friendly hello
         </h3>
         <Link
-          href="https://github.com/sensitiky"
+          href="mailto:mariomcorrea3@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
