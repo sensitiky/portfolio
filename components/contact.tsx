@@ -11,7 +11,11 @@ const Contact: React.FC = () => {
         <h3 className="text-xl italic mb-8">
           Feel free to reach out for collaborations or just a friendly hello
         </h3>
-        <Link href="mailto:johndoe@example.com">
+        <Link
+          href="https://github.com/sensitiky"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button className="text-gray-300 rounded-full font-semibold text-lg transition duration-300 mb-8 animated-background items-center">
             Contact Me
           </Button>
