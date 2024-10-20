@@ -14,6 +14,10 @@ import {
   SiGit,
   SiGooglecloud,
   SiPostgresql,
+  SiMysql,
+  SiSqlite,
+  SiSupabase,
+  SiReact,
 } from 'react-icons/si';
 
 const languages = [
@@ -38,6 +42,10 @@ const frameworks = [
   },
   { name: 'Flutter', icon: <SiFlutter className="size-8 text-blue-500" /> },
   {
+    name: 'React Native',
+    icon: <SiReact className="size-8" style={{ fill: 'url(#reactnative)' }} />,
+  },
+  {
     name: 'Spring Boot',
     icon: <SiSpringboot className="size-8 text-green-500" />,
   },
@@ -45,7 +53,28 @@ const frameworks = [
   { name: 'NestJS', icon: <SiNestjs className="size-8 text-red-500" /> },
 ];
 
-const tools = [
+const databases = [
+  {
+    name: 'PostgreSQL',
+    icon: (
+      <SiPostgresql className="size-8" style={{ fill: 'url(#postgresql)' }} />
+    ),
+  },
+  {
+    name: 'MySQL',
+    icon: <SiMysql className="size-8" style={{ fill: 'url(#mysql)' }} />,
+  },
+  {
+    name: 'SQLite',
+    icon: <SiSqlite className="size-8 text-blue-400" />,
+  },
+  {
+    name: 'Supabase',
+    icon: <SiSupabase className="size-8 text-green-500" />,
+  },
+];
+
+const cloudTools = [
   {
     name: 'Cloudflare',
     icon: (
@@ -66,12 +95,6 @@ const tools = [
       <SiGooglecloud className="size-8" style={{ fill: 'url(#googlecloud)' }} />
     ),
   },
-  {
-    name: 'PostgreSQL',
-    icon: (
-      <SiPostgresql className="size-8" style={{ fill: 'url(#postgresql)' }} />
-    ),
-  },
 ];
 
 const Skills: React.FC = () => {
@@ -81,9 +104,7 @@ const Skills: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
 
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 text-center">
-            Programming Languages
-          </h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center">Languages</h3>
           <div className="flex justify-center space-x-8">
             {languages.map((lang, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -108,10 +129,23 @@ const Skills: React.FC = () => {
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-semibold mb-6 text-center">Tools</h3>
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-6 text-center">Databases</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {tools.map((tool, index) => (
+            {databases.map((db, index) => (
+              <div key={index} className="flex flex-col items-center">
+                {db.icon}
+                <span className="mt-2">{db.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold mb-6 text-center">
+            Cloud Tools
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {cloudTools.map((tool, index) => (
               <div key={index} className="flex flex-col items-center">
                 {tool.icon}
                 <span className="mt-2">{tool.name}</span>
@@ -147,6 +181,14 @@ const Skills: React.FC = () => {
         <linearGradient id="postgresql" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="#336791" offset="0%" />
           <stop stopColor="#6699cc" offset="100%" />
+        </linearGradient>
+        <linearGradient id="mysql" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#00758f" offset="0%" />
+          <stop stopColor="#00a6d6" offset="100%" />
+        </linearGradient>
+        <linearGradient id="reactnative" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#61dafb" offset="0%" />
+          <stop stopColor="#21a1f1" offset="100%" />
         </linearGradient>
       </svg>
     </section>
