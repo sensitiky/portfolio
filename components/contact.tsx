@@ -1,17 +1,20 @@
 import React from 'react';
 import { Github, Linkedin, FileText } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from './ui/button';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-800 text-white">
+    <section id="contact" className="py-20 animated-background text-gray-300">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-        <Link
-          href="mailto:johndoe@example.com"
-          className="bg-gradient-to-br to-purple-400 via-gray-300 from-blue-700 text-black px-8 py-3 rounded-full font-semibold text-lg transition duration-300 inline-block mb-8 animated-background"
-        >
-          Contact Me
+        <h2 className="text-3xl font-bold mb-8">Want to work together?</h2>
+        <h3 className="text-xl italic mb-8">
+          Feel free to reach out for collaborations or just a friendly hello
+        </h3>
+        <Link href="mailto:johndoe@example.com">
+          <Button className="text-gray-300 rounded-full font-semibold text-lg transition duration-300 mb-8 animated-background items-center">
+            Contact Me
+          </Button>
         </Link>
         <div className="flex justify-center space-x-6">
           <Link
