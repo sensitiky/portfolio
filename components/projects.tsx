@@ -121,8 +121,11 @@ const Projects: React.FC = () => {
           Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card className="animated-background hover:shadow-lg transition-shadow duration-300">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              className="animated-background hover:shadow-lg transition-shadow duration-300"
+            >
               <CardTitle className="text-xl text-neutral-300 flex justify-center p-4">
                 {project.title}
               </CardTitle>
