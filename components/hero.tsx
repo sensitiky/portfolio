@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Button } from './ui/button';
-import { AiFillFilePdf, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import Image from 'next/image';
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { AiFillFilePdf, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -12,12 +12,14 @@ export default function Hero() {
       <article className="p-7 md:p-2 animated-background col-span-full md:col-span-2 rounded-xl flex flex-col justify-evenly items-center transition-colors duration-500">
         <div className="flex flex-col justify-center items-center">
           <h1 className="font-medium text-2xl text-gray-300 md:text-5xl mb-4 text-center md:text-left">
-            Hello, I&apos;m Mario, a backend
-            <br /> & mobile Developer
+            Mario Correa
           </h1>
-          <h3 className="mb-6 md:mb-0 text-lg md:text-lg text-center md:text-left text-gray-400">
-            Deeply passionate about three things: technology, development and
-            minimalism.
+          <h2 className="text-xl font-medium text-gray-200">
+            Backend & Mobile Developer
+          </h2>
+          <h3 className="mb-6 md:mb-0 text-lg md:text-lg text-center md:text-left text-gray-400 break-words">
+            Deeply passionate about three things:
+            <br /> technology, development and minimalism.
           </h3>
         </div>
         <div className="flex flex-wrap justify-center md:justify-start items-center gap-4">
