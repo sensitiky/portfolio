@@ -105,6 +105,38 @@ const Skills: React.FC = () => {
           <stop stopColor="#61dafb" offset="0%" />
           <stop stopColor="#21a1f1" offset="100%" />
         </linearGradient>
+        <linearGradient id="kotlin" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#A97BFF" offset="0%" />
+          <stop stopColor="#6C4AB6" offset="100%" />
+        </linearGradient>
+        <linearGradient id="dart" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#00B4AB" offset="0%" />
+          <stop stopColor="#009688" offset="100%" />
+        </linearGradient>
+        <linearGradient id="javascript" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#F7DF1E" offset="10%" />
+          <stop stopColor="#FFD700" offset="100%" />
+        </linearGradient>
+        <linearGradient id="typescript" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#3178C6" offset="0%" />
+          <stop stopColor="#007ACC" offset="100%" />
+        </linearGradient>
+        <linearGradient id="flutter" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#02569B" offset="0%" />
+          <stop stopColor="#0175C2" offset="100%" />
+        </linearGradient>
+        <linearGradient id="springboot" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#6DB33F" offset="0%" />
+          <stop stopColor="#87C540" offset="100%" />
+        </linearGradient>
+        <linearGradient id="sqlite" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#003B57" offset="0%" />
+          <stop stopColor="#0078D4" offset="100%" />
+        </linearGradient>
+        <linearGradient id="supabase" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#3ECF8E" offset="0%" />
+          <stop stopColor="#2BC48A" offset="100%" />
+        </linearGradient>
       </svg>
     </section>
   );
