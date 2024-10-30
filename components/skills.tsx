@@ -1,154 +1,69 @@
-import React from 'react';
 import {
-  SiDart,
-  SiFlutter,
-  SiJavascript,
-  SiJetpackcompose,
-  SiKotlin,
-  SiNestjs,
-  SiNextdotjs,
-  SiSpringboot,
-  SiTypescript,
-  SiCloudflare,
-  SiAmazon,
-  SiGit,
-  SiGooglecloud,
-  SiPostgresql,
-  SiMysql,
-  SiSqlite,
-  SiSupabase,
-  SiReact,
-} from 'react-icons/si';
-
-const languages = [
-  { name: 'Kotlin', icon: <SiKotlin className="h-8 w-8 text-purple-600" /> },
-  { name: 'Dart', icon: <SiDart className="h-8 w-8 text-blue-600" /> },
-  {
-    name: 'Javascript',
-    icon: <SiJavascript className="h-8 w-8 text-yellow-400" />,
-  },
-  {
-    name: 'Typescript',
-    icon: <SiTypescript className="h-8 w-8 text-blue-600" />,
-  },
-];
-
-const frameworks = [
-  {
-    name: 'JetPack Compose',
-    icon: (
-      <SiJetpackcompose className="size-8" style={{ fill: 'url(#jetpack)' }} />
-    ),
-  },
-  { name: 'Flutter', icon: <SiFlutter className="size-8 text-blue-500" /> },
-  {
-    name: 'React Native',
-    icon: <SiReact className="size-8" style={{ fill: 'url(#reactnative)' }} />,
-  },
-  {
-    name: 'Spring Boot',
-    icon: <SiSpringboot className="size-8 text-green-500" />,
-  },
-  { name: 'NextJS', icon: <SiNextdotjs className="size-8 text-black" /> },
-  { name: 'NestJS', icon: <SiNestjs className="size-8 text-red-500" /> },
-];
-
-const databases = [
-  {
-    name: 'PostgreSQL',
-    icon: (
-      <SiPostgresql className="size-8" style={{ fill: 'url(#postgresql)' }} />
-    ),
-  },
-  {
-    name: 'MySQL',
-    icon: <SiMysql className="size-8" style={{ fill: 'url(#mysql)' }} />,
-  },
-  {
-    name: 'SQLite',
-    icon: <SiSqlite className="size-8 text-blue-400" />,
-  },
-  {
-    name: 'Supabase',
-    icon: <SiSupabase className="size-8 text-green-500" />,
-  },
-];
-
-const cloudTools = [
-  {
-    name: 'Cloudflare',
-    icon: (
-      <SiCloudflare className="size-8" style={{ fill: 'url(#cloudflare)' }} />
-    ),
-  },
-  {
-    name: 'AWS',
-    icon: <SiAmazon className="size-8" style={{ fill: 'url(#aws)' }} />,
-  },
-  {
-    name: 'Git',
-    icon: <SiGit className="size-8" style={{ fill: 'url(#git)' }} />,
-  },
-  {
-    name: 'Google Cloud',
-    icon: (
-      <SiGooglecloud className="size-8" style={{ fill: 'url(#googlecloud)' }} />
-    ),
-  },
-];
+  languages,
+  frameworks,
+  databases,
+  cloudTools,
+} from "@/constants/utils";
+import React from "react";
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-50 rounded-xl">
+    <section id="skills" className="py-20 border-t-[1px] border-neutral-300">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
+        <h2 className="text-4xl font-semibold text-start mb-12 text-neutral-200">
+          Skills
+        </h2>
 
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 text-center">Languages</h3>
-          <div className="flex justify-center space-x-8">
+          <h3 className="text-2xl font-medium mb-6 text-start text-neutral-300">
+            Languages
+          </h3>
+          <div className="flex justify-start space-x-8">
             {languages.map((lang, index) => (
               <div key={index} className="flex flex-col items-center">
                 {lang.icon}
-                <span className="mt-2">{lang.name}</span>
+                <span className="mt-2 text-neutral-300">{lang.name}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 text-center">
+          <h3 className="text-2xl font-medium mb-6 text-start text-neutral-200">
             Frameworks
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-start gap-4">
             {frameworks.map((framework, index) => (
               <div key={index} className="flex flex-col items-center">
                 {framework.icon}
-                <span className="mt-2">{framework.name}</span>
+                <span className="mt-2 text-neutral-300">{framework.name}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6 text-center">Databases</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <h3 className="text-2xl font-medium mb-6 text-start text-neutral-200">
+            Databases
+          </h3>
+          <div className="flex flex-wrap justify-start gap-4">
             {databases.map((db, index) => (
               <div key={index} className="flex flex-col items-center">
                 {db.icon}
-                <span className="mt-2">{db.name}</span>
+                <span className="mt-2 text-neutral-300">{db.name}</span>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold mb-6 text-center">
+          <h3 className="text-2xl font-medium mb-6 text-start text-neutral-200">
             Cloud Tools
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-start gap-4">
             {cloudTools.map((tool, index) => (
               <div key={index} className="flex flex-col items-center">
                 {tool.icon}
-                <span className="mt-2">{tool.name}</span>
+                <span className="mt-2 text-neutral-300">{tool.name}</span>
               </div>
             ))}
           </div>
