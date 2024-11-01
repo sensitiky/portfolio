@@ -113,9 +113,9 @@ const Skills: React.FC = () => {
           <stop stopColor="#00B4AB" offset="0%" />
           <stop stopColor="#009688" offset="100%" />
         </linearGradient>
-        <linearGradient id="javascript" x1="100%" y1="100%" x2="0%" y2="0%">
-          <stop stopColor="#F7DF1E" offset="10%" />
-          <stop stopColor="#FFD700" offset="100%" />
+        <linearGradient id="java" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#5382a1" offset="0%" />
+          <stop stopColor="#007396" offset="100%" />
         </linearGradient>
         <linearGradient id="typescript" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="#3178C6" offset="0%" />

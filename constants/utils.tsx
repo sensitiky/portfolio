@@ -1,8 +1,11 @@
 import { BiLogoPostgresql } from "react-icons/bi";
+import { DiJava } from "react-icons/di";
+import { FaJava } from "react-icons/fa";
+import { GrJava } from "react-icons/gr";
+import { RiJavaFill } from "react-icons/ri";
 import {
   SiDart,
   SiFlutter,
-  SiJavascript,
   SiJetpackcompose,
   SiKotlin,
   SiNestjs,
@@ -197,22 +200,20 @@ export const projects = [
 export const languages = [
   {
     name: "Kotlin",
-    icon: <SiKotlin className="h-8 w-8" style={{ fill: "url(#kotlin)" }} />,
+    icon: <SiKotlin className="size-10" style={{ fill: "url(#kotlin)" }} />,
   },
   {
     name: "Dart",
-    icon: <SiDart className="h-8 w-8" style={{ fill: "url(#dart)" }} />,
+    icon: <SiDart className="size-10" style={{ fill: "url(#dart)" }} />,
   },
   {
-    name: "Javascript",
-    icon: (
-      <SiJavascript className="h-8 w-8" style={{ fill: "url(#javascript)" }} />
-    ),
+    name: "Java",
+    icon: <RiJavaFill className="size-10" style={{ fill: "url(#java)" }} />,
   },
   {
     name: "Typescript",
     icon: (
-      <SiTypescript className="h-8 w-8" style={{ fill: "url(#typescript)" }} />
+      <SiTypescript className="size-10" style={{ fill: "url(#typescript)" }} />
     ),
   },
 ];
