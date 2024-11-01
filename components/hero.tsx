@@ -12,7 +12,7 @@ export default function Hero() {
           Mario Correa
         </h1>
         <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-4">
-          Backend & Mobile Developer
+          Mobile Developer
         </h2>
         <p className="mb-6 text-base md:text-xl text-neutral-400">
           Deeply passionate about technology, development, and minimalism.
