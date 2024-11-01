@@ -200,20 +200,20 @@ export const projects = [
 export const languages = [
   {
     name: "Kotlin",
-    icon: <SiKotlin className="size-10" style={{ fill: "url(#kotlin)" }} />,
+    icon: <SiKotlin className="size-20" style={{ fill: "url(#kotlin)" }} />,
   },
   {
     name: "Dart",
-    icon: <SiDart className="size-10" style={{ fill: "url(#dart)" }} />,
+    icon: <SiDart className="size-20" style={{ fill: "url(#dart)" }} />,
   },
   {
     name: "Java",
-    icon: <RiJavaFill className="size-10" style={{ fill: "url(#java)" }} />,
+    icon: <RiJavaFill className="size-20" style={{ fill: "url(#java)" }} />,
   },
   {
     name: "Typescript",
     icon: (
-      <SiTypescript className="size-10" style={{ fill: "url(#typescript)" }} />
+      <SiTypescript className="size-20" style={{ fill: "url(#typescript)" }} />
     ),
   },
 ];
@@ -222,30 +222,30 @@ export const frameworks = [
   {
     name: "JetPack",
     icon: (
-      <SiJetpackcompose className="size-8" style={{ fill: "url(#jetpack)" }} />
+      <SiJetpackcompose className="size-10" style={{ fill: "url(#jetpack)" }} />
     ),
   },
   {
     name: "Flutter",
-    icon: <SiFlutter className="size-8" style={{ fill: "url(#flutter)" }} />,
+    icon: <SiFlutter className="size-10" style={{ fill: "url(#flutter)" }} />,
   },
   {
     name: "React Native",
-    icon: <SiReact className="size-8" style={{ fill: "url(#reactnative)" }} />,
+    icon: <SiReact className="size-10" style={{ fill: "url(#reactnative)" }} />,
   },
   {
     name: "Spring Boot",
     icon: (
-      <SiSpringboot className="size-8" style={{ fill: "url(#springboot)" }} />
+      <SiSpringboot className="size-10" style={{ fill: "url(#springboot)" }} />
     ),
   },
   {
     name: "NextJS",
-    icon: <SiNextdotjs className="size-8" style={{ fill: "white" }} />,
+    icon: <SiNextdotjs className="size-10" style={{ fill: "white" }} />,
   },
   {
     name: "NestJS",
-    icon: <SiNestjs className="size-8" style={{ fill: "url(#nestjs)" }} />,
+    icon: <SiNestjs className="size-10" style={{ fill: "url(#nestjs)" }} />,
   },
 ];
 
@@ -254,22 +254,22 @@ export const databases = [
     name: "PostgreSQL",
     icon: (
       <BiLogoPostgresql
-        className="size-8"
+        className="size-10"
         style={{ fill: "url(#postgresql)" }}
       />
     ),
   },
   {
     name: "MySQL",
-    icon: <SiMysql className="size-8" style={{ fill: "url(#mysql)" }} />,
+    icon: <SiMysql className="size-10" style={{ fill: "url(#mysql)" }} />,
   },
   {
     name: "SQLite",
-    icon: <SiSqlite className="size-8" style={{ fill: "url(#sqlite)" }} />,
+    icon: <SiSqlite className="size-10" style={{ fill: "url(#sqlite)" }} />,
   },
   {
     name: "Supabase",
-    icon: <SiSupabase className="size-8" style={{ fill: "url(#supabase)" }} />,
+    icon: <SiSupabase className="size-10" style={{ fill: "url(#supabase)" }} />,
   },
 ];
 
@@ -277,21 +277,24 @@ export const cloudTools = [
   {
     name: "Cloudflare",
     icon: (
-      <SiCloudflare className="size-8" style={{ fill: "url(#cloudflare)" }} />
+      <SiCloudflare className="size-10" style={{ fill: "url(#cloudflare)" }} />
     ),
   },
   {
     name: "AWS",
-    icon: <SiAmazon className="size-8" style={{ fill: "url(#aws)" }} />,
+    icon: <SiAmazon className="size-10" style={{ fill: "url(#aws)" }} />,
   },
   {
     name: "Git",
-    icon: <SiGit className="size-8" style={{ fill: "url(#git)" }} />,
+    icon: <SiGit className="size-10" style={{ fill: "url(#git)" }} />,
   },
   {
     name: "Google Cloud",
     icon: (
-      <SiGooglecloud className="size-8" style={{ fill: "url(#googlecloud)" }} />
+      <SiGooglecloud
+        className="size-10"
+        style={{ fill: "url(#googlecloud)" }}
+      />
     ),
   },
 ];

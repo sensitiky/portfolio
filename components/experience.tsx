@@ -4,9 +4,9 @@ const experiences = [
   {
     company: "Freelancer.",
     position: "Fullstack Developer",
-    period: "April 2023 - Present",
+    period: "July 2022 - Present",
     description:
-      "Working on various projects using TypeScript, Kotlin, Dart and JavaScript.",
+      "Working on various projects using TypeScript, Kotlin, Dart and Java.",
   },
   {
     company: "IESA Instituto de Estudios Superiores Argentino",

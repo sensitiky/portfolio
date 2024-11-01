@@ -8,7 +8,10 @@ import React from "react";
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 border-t-[1px] border-neutral-300">
+    <section
+      id="skills"
+      className="container py-20 border-t-[1px] border-neutral-300"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-semibold text-start mb-12 text-neutral-200">
           Skills
@@ -20,7 +23,7 @@ const Skills: React.FC = () => {
           </h3>
           <div className="flex justify-start space-x-8">
             {languages.map((lang, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center size-16">
                 {lang.icon}
                 <span className="mt-2 text-neutral-300">{lang.name}</span>
               </div>
@@ -48,7 +51,7 @@ const Skills: React.FC = () => {
           </h3>
           <div className="flex flex-wrap justify-start gap-4">
             {databases.map((db, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center size-16">
                 {db.icon}
                 <span className="mt-2 text-neutral-300">{db.name}</span>
               </div>
