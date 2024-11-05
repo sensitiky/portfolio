@@ -24,6 +24,8 @@ import {
   SiAwsamplify,
   SiFirebase,
   SiTailwindcss,
+  SiBlockbench,
+  SiBotblecms,
 } from "react-icons/si";
 
 export const projects = [
@@ -200,20 +202,26 @@ export const projects = [
 export const languages = [
   {
     name: "Kotlin",
-    icon: <SiKotlin className="size-20" style={{ fill: "url(#kotlin)" }} />,
+    icon: (
+      <SiKotlin
+        className="size-20 text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
   {
     name: "Dart",
-    icon: <SiDart className="size-20" style={{ fill: "url(#dart)" }} />,
-  },
-  {
-    name: "Java",
-    icon: <RiJavaFill className="size-20" style={{ fill: "url(#java)" }} />,
+    icon: (
+      <SiDart className="text-neutral-300" style={{ height: 50, width: 30 }} />
+    ),
   },
   {
     name: "Typescript",
     icon: (
-      <SiTypescript className="size-20" style={{ fill: "url(#typescript)" }} />
+      <SiTypescript
+        className="size-20 text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
     ),
   },
 ];
@@ -222,30 +230,44 @@ export const frameworks = [
   {
     name: "JetPack",
     icon: (
-      <SiJetpackcompose className="size-10" style={{ fill: "url(#jetpack)" }} />
+      <SiJetpackcompose
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
     ),
   },
   {
     name: "Flutter",
-    icon: <SiFlutter className="size-10" style={{ fill: "url(#flutter)" }} />,
+    icon: (
+      <SiFlutter
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
   {
     name: "React Native",
-    icon: <SiReact className="size-10" style={{ fill: "url(#reactnative)" }} />,
-  },
-  {
-    name: "Spring Boot",
     icon: (
-      <SiSpringboot className="size-10" style={{ fill: "url(#springboot)" }} />
+      <SiReact className="text-neutral-300" style={{ height: 50, width: 30 }} />
     ),
   },
   {
     name: "NextJS",
-    icon: <SiNextdotjs className="size-10" style={{ fill: "white" }} />,
+    icon: (
+      <SiNextdotjs
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
   {
     name: "NestJS",
-    icon: <SiNestjs className="size-10" style={{ fill: "url(#nestjs)" }} />,
+    icon: (
+      <SiNestjs
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
 ];
 
@@ -254,22 +276,34 @@ export const databases = [
     name: "PostgreSQL",
     icon: (
       <BiLogoPostgresql
-        className="size-10"
-        style={{ fill: "url(#postgresql)" }}
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
       />
     ),
   },
   {
     name: "MySQL",
-    icon: <SiMysql className="size-10" style={{ fill: "url(#mysql)" }} />,
+    icon: (
+      <SiMysql className="text-neutral-300" style={{ height: 50, width: 30 }} />
+    ),
   },
   {
     name: "SQLite",
-    icon: <SiSqlite className="size-10" style={{ fill: "url(#sqlite)" }} />,
+    icon: (
+      <SiSqlite
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
   {
-    name: "Supabase",
-    icon: <SiSupabase className="size-10" style={{ fill: "url(#supabase)" }} />,
+    name: "Firebase",
+    icon: (
+      <SiFirebase
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
 ];
 
@@ -277,93 +311,34 @@ export const cloudTools = [
   {
     name: "Cloudflare",
     icon: (
-      <SiCloudflare className="size-10" style={{ fill: "url(#cloudflare)" }} />
+      <SiCloudflare
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
     ),
   },
   {
     name: "AWS",
-    icon: <SiAmazon className="size-10" style={{ fill: "url(#aws)" }} />,
+    icon: (
+      <SiAmazon
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
+      />
+    ),
   },
   {
     name: "Git",
-    icon: <SiGit className="size-10" style={{ fill: "url(#git)" }} />,
+    icon: (
+      <SiGit className="text-neutral-300" style={{ height: 50, width: 30 }} />
+    ),
   },
   {
     name: "Google Cloud",
     icon: (
       <SiGooglecloud
-        className="size-10"
-        style={{ fill: "url(#googlecloud)" }}
+        className="text-neutral-300"
+        style={{ height: 50, width: 30 }}
       />
     ),
   },
 ];
-<svg width="0" height="0">
-  <linearGradient id="jetpack" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#348bbc" offset="0%" />
-    <stop stopColor="#34ba61" offset="100%" />
-    <stop stopColor="#34bc61" offset="100%" />
-  </linearGradient>
-  <linearGradient id="cloudflare" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#f38020" offset="0%" />
-    <stop stopColor="#f9a825" offset="100%" />
-  </linearGradient>
-  <linearGradient id="aws" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#ff9900" offset="0%" />
-    <stop stopColor="#ffb84d" offset="100%" />
-  </linearGradient>
-  <linearGradient id="git" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#f34f29" offset="0%" />
-    <stop stopColor="#f66d3a" offset="100%" />
-  </linearGradient>
-  <linearGradient id="googlecloud" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#4285f4" offset="0%" />
-    <stop stopColor="#34a853" offset="50%" />
-    <stop stopColor="#fbbc05" offset="75%" />
-    <stop stopColor="#ea4335" offset="100%" />
-  </linearGradient>
-  <linearGradient id="postgresql" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#336791" offset="0%" />
-    <stop stopColor="#6699cc" offset="100%" />
-  </linearGradient>
-  <linearGradient id="mysql" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#00758f" offset="0%" />
-    <stop stopColor="#00a6d6" offset="100%" />
-  </linearGradient>
-  <linearGradient id="reactnative" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#61dafb" offset="0%" />
-    <stop stopColor="#21a1f1" offset="100%" />
-  </linearGradient>
-  <linearGradient id="kotlin" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#A97BFF" offset="0%" />
-    <stop stopColor="#6C4AB6" offset="100%" />
-  </linearGradient>
-  <linearGradient id="dart" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#00B4AB" offset="0%" />
-    <stop stopColor="#009688" offset="100%" />
-  </linearGradient>
-  <linearGradient id="javascript" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#F7DF1E" offset="10%" />
-    <stop stopColor="#FFD700" offset="100%" />
-  </linearGradient>
-  <linearGradient id="typescript" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#3178C6" offset="0%" />
-    <stop stopColor="#007ACC" offset="100%" />
-  </linearGradient>
-  <linearGradient id="flutter" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#02569B" offset="0%" />
-    <stop stopColor="#0175C2" offset="100%" />
-  </linearGradient>
-  <linearGradient id="springboot" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#6DB33F" offset="0%" />
-    <stop stopColor="#87C540" offset="100%" />
-  </linearGradient>
-  <linearGradient id="sqlite" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#003B57" offset="0%" />
-    <stop stopColor="#0078D4" offset="100%" />
-  </linearGradient>
-  <linearGradient id="supabase" x1="100%" y1="100%" x2="0%" y2="0%">
-    <stop stopColor="#3ECF8E" offset="0%" />
-    <stop stopColor="#2BC48A" offset="100%" />
-  </linearGradient>
-</svg>;
