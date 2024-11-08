@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
       </div>
       <Image
-        src="/Mario.jpg"
+        src="/Mario.webp"
         width={1920}
         height={1080}
         className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover"
