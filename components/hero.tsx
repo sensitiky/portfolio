@@ -1,61 +1,75 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { AiFillFilePdf, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Github, Linkedin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="flex gap-2 items-center justify-between" id="Home">
-      <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-        <div className="h-32"></div>
-        <h1 className="font-semibold text-3xl md:text-5xl text-neutral-200 mb-2">
-          Mario Correa
-        </h1>
-        <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-4">
-          Mobile Developer
-        </h2>
-        <p className="mb-6 text-base md:text-xl text-neutral-400">
-          Deeply passionate about technology, development, and minimalism.
-        </p>
-        <div className="flex flex-col justify-center md:justify-start items-center gap-4">
-          <Link href="#projects">
-            <Button className="bg-gray-800 hover:bg-gray-700 text-white rounded-full px-5 py-2 text-sm md:text-base">
-              Check out my work
-            </Button>
-          </Link>
-          <div className="flex flex-row gap-2">
-            {" "}
+    <section className="flex items-center justify-start" id="Home">
+      <div className="grid gap-8 items-center">
+        {/* Left content */}
+        <div className="space-y-6 text-start order-2">
+          <div className="space-y-2">
+            <h2 className="text-sm text-purple-400 font-medium tracking-wider uppercase">
+              Mobile Developer
+            </h2>
+            <h1 className="font-bold text-2xl text-neutral-100 leading-tight">
+              Mario Correa
+            </h1>
+            <p className="text-lg text-gray-300">
+              I'm a fullstack developer with a focus on mobile tech.
+            </p>
+            <p className="text-lg text-gray-300">
+              Deeply passionate about technology, development, and minimalism.
+            </p>
+            <div></div>
+          </div>
+          <div className="flex gap-6 justify-start">
             <Link
               href="https://github.com/sensitiky"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-purple-400 transition-colors"
             >
-              <AiFillGithub className="size-6 md:size-10 text-neutral-300 hover:text-neutral-500" />
+              <Github className="h-6 w-6" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/mario-correa-45324b237/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-purple-400 transition-colors"
             >
-              <AiFillLinkedin className="size-6 md:size-10 text-neutral-300 hover:text-neutral-500" />
+              <Linkedin className="h-6 w-6" />
             </Link>
-            <Link
-              href="CV-Correa Mario.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillFilePdf className="size-6 md:size-10 text-neutral-300 hover:text-neutral-500" />
-            </Link>
+          </div>
+          <div></div>
+          <Link href="mailto:mariomcorrea3@gmail.com" target="_blank">
+            <p className="rounded-full text-gray-300 font-medium underline">
+              Contact me
+            </p>
+          </Link>
+          <Link href="CV-Correa Mario.pdf" target="_blank">
+            <p className="rounded-full text-gray-300 font-medium underline">
+              View Resume
+            </p>
+          </Link>
+        </div>
+
+        {/* Right content - Image */}
+        <div className="order-1 flex justify-start ">
+          <div className="relative">
+            <div className="size-[100px] rounded-full overflow-hidden">
+              <Image
+                src="/Mario.webp"
+                width={1920}
+                height={1080}
+                alt="Mario Picture"
+                priority
+              />
+            </div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-purple-500/10 to-transparent" />
           </div>
         </div>
       </div>
-      <Image
-        src="/Mario.webp"
-        width={1920}
-        height={1080}
-        className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover"
-        alt="Mario Picture"
-      />
     </section>
   );
 }

@@ -1,24 +1,21 @@
-import React from "react";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import { Button } from './ui/button';
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardTitle,
-} from "./ui/card";
-import { projects } from "@/constants/utils";
-import { SiGithub } from "react-icons/si";
+} from './ui/card';
+import { projects } from '@/constants/utils';
+import { SiGithub } from 'react-icons/si';
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 border-t-[1px] border-neutral-300">
+    <section id="projects">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center mb-12 text-neutral-200">
-          Projects
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card
@@ -65,55 +62,6 @@ const Projects: React.FC = () => {
           ))}
         </div>
       </div>
-      {/* SVG Gradients */}
-      <svg width="0" height="0">
-        <defs>
-          <linearGradient id="kotlin" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#A97BFF" offset="0%" />
-            <stop stopColor="#6C4AB6" offset="100%" />
-          </linearGradient>
-          <linearGradient id="jetpack" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#348bbc" offset="0%" />
-            <stop stopColor="#34ba61" offset="100%" />
-          </linearGradient>
-          <linearGradient id="nextjs" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#000000" offset="0%" />
-            <stop stopColor="#333333" offset="100%" />
-          </linearGradient>
-          <linearGradient id="nestjs" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#E0234E" offset="0%" />
-            <stop stopColor="#A61B2B" offset="100%" />
-          </linearGradient>
-          <linearGradient id="typescript" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#007ACC" offset="0%" />
-            <stop stopColor="#004A8D" offset="100%" />
-          </linearGradient>
-          <linearGradient id="tailwind" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#38B2AC" offset="0%" />
-            <stop stopColor="#319795" offset="100%" />
-          </linearGradient>
-          <linearGradient id="postgresql" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#336791" offset="0%" />
-            <stop stopColor="#4F7DBE" offset="100%" />
-          </linearGradient>
-          <linearGradient id="aws" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#FF9900" offset="0%" />
-            <stop stopColor="#FFB84D" offset="100%" />
-          </linearGradient>
-          <linearGradient id="flutter" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#02569B" offset="0%" />
-            <stop stopColor="#0A84FF" offset="100%" />
-          </linearGradient>
-          <linearGradient id="firebase" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#FFCA28" offset="0%" />
-            <stop stopColor="#FFA000" offset="100%" />
-          </linearGradient>
-          <linearGradient id="dart" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#0175C2" offset="0%" />
-            <stop stopColor="#13B9FD" offset="100%" />
-          </linearGradient>
-        </defs>
-      </svg>
     </section>
   );
 };

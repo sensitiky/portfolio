@@ -1,8 +1,4 @@
-import { BiLogoPostgresql } from "react-icons/bi";
-import { DiJava } from "react-icons/di";
-import { FaJava } from "react-icons/fa";
-import { GrJava } from "react-icons/gr";
-import { RiJavaFill } from "react-icons/ri";
+import { BiLogoPostgresql } from 'react-icons/bi';
 import {
   SiDart,
   SiFlutter,
@@ -10,190 +6,185 @@ import {
   SiKotlin,
   SiNestjs,
   SiNextdotjs,
-  SiSpringboot,
   SiTypescript,
   SiCloudflare,
   SiAmazon,
   SiGit,
   SiGooglecloud,
-  SiPostgresql,
   SiMysql,
   SiSqlite,
-  SiSupabase,
   SiReact,
   SiAwsamplify,
   SiFirebase,
   SiTailwindcss,
-  SiBlockbench,
-  SiBotblecms,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export const projects = [
   {
-    title: "Habit/Task Management",
-    gifUrl: "/taskHand.gif",
-    githubUrl: "https://github.com/sensitiky/mobile-task.habit-management",
+    title: 'Habit/Task Management',
+    gifUrl: '/taskHand.gif',
+    githubUrl: 'https://github.com/sensitiky/mobile-task.habit-management',
     stack: [
       {
         icon: (
           <SiKotlin
             key="kotlin"
             className="h-5 w-5"
-            style={{ fill: "url(#kotlin)" }}
+            style={{ fill: 'url(#kotlin)' }}
           />
         ),
-        name: "Kotlin",
+        name: 'Kotlin',
       },
       {
         icon: (
           <SiJetpackcompose
             key="jetpack"
             className="h-5 w-5"
-            style={{ fill: "url(#jetpack)" }}
+            style={{ fill: 'url(#jetpack)' }}
           />
         ),
-        name: "Jetpack",
+        name: 'Jetpack',
       },
       {
         icon: (
           <SiFirebase
             key="Firebase"
             className="h-5 w-5"
-            style={{ fill: "url(#firebase)" }}
+            style={{ fill: 'url(#firebase)' }}
           />
         ),
-        name: "Firebase",
+        name: 'Firebase',
       },
     ],
   },
   {
-    title: "Blockchain Social Media",
-    gifUrl: "/blogchain.gif",
-    githubUrl: "https://github.com/sensitiky/pwa-blockchain-articles",
+    title: 'Blockchain Social Media',
+    gifUrl: '/blogchain.gif',
+    githubUrl: 'https://github.com/sensitiky/pwa-blockchain-articles',
     stack: [
       {
         icon: (
           <SiNextdotjs
             key="nextjs"
             className="h-5 w-5"
-            style={{ fill: "white" }}
+            style={{ fill: 'white' }}
           />
         ),
-        name: "Next.js",
+        name: 'Next.js',
       },
       {
         icon: (
           <SiNestjs
             key="nestjs"
             className="h-5 w-5"
-            style={{ fill: "url(#nestjs)" }}
+            style={{ fill: 'url(#nestjs)' }}
           />
         ),
-        name: "NestJS",
+        name: 'NestJS',
       },
       {
         icon: (
           <SiTypescript
             key="typescript"
             className="h-5 w-5"
-            style={{ fill: "url(#typescript)" }}
+            style={{ fill: 'url(#typescript)' }}
           />
         ),
-        name: "TypeScript",
+        name: 'TypeScript',
       },
       {
         icon: (
-          <SiPostgresql
+          <BiLogoPostgresql
             key="postgresql"
             className="h-5 w-5"
-            style={{ fill: "url(#postgresql)" }}
+            style={{ fill: 'url(#postgresql)' }}
           />
         ),
-        name: "PostgreSQL",
+        name: 'PostgreSQL',
       },
       {
         icon: (
           <SiAwsamplify
             key="aws"
             className="h-5 w-5"
-            style={{ fill: "url(#aws)" }}
+            style={{ fill: 'url(#aws)' }}
           />
         ),
-        name: "AWS",
+        name: 'AWS',
       },
     ],
   },
   {
-    title: "Educational Portal",
-    gifUrl: "/iesa.gif",
-    githubUrl: "https://github.com/sensitiky/SPA-university",
+    title: 'Educational Portal',
+    gifUrl: '/iesa.gif',
+    githubUrl: 'https://github.com/sensitiky/SPA-university',
     stack: [
       {
         icon: (
           <SiNextdotjs
             key="nextjs"
             className="h-5 w-5"
-            style={{ fill: "white" }}
+            style={{ fill: 'white' }}
           />
         ),
-        name: "Next.js",
+        name: 'Next.js',
       },
       {
         icon: (
           <SiTailwindcss
             key="tailwind"
             className="h-5 w-5"
-            style={{ fill: "url(#tailwind)" }}
+            style={{ fill: 'url(#tailwind)' }}
           />
         ),
-        name: "Tailwind CSS",
+        name: 'Tailwind CSS',
       },
       {
         icon: (
           <SiTypescript
             key="typescript"
             className="h-5 w-5"
-            style={{ fill: "url(#typescript)" }}
+            style={{ fill: 'url(#typescript)' }}
           />
         ),
-        name: "TypeScript",
+        name: 'TypeScript',
       },
     ],
   },
   {
-    title: "Finance Tracker",
-    gifUrl: "/fundora.gif",
-    githubUrl: "https://github.com/sensitiky/flutter-finance-tracker",
+    title: 'Finance Tracker',
+    gifUrl: '/fundora.gif',
+    githubUrl: 'https://github.com/sensitiky/flutter-finance-tracker',
     stack: [
       {
         icon: (
           <SiFlutter
             key="Flutter"
             className="h-5 w-5"
-            style={{ fill: "url(#flutter)" }}
+            style={{ fill: 'url(#flutter)' }}
           />
         ),
-        name: "Flutter",
+        name: 'Flutter',
       },
       {
         icon: (
           <SiFirebase
             key="Firebase"
             className="h-5 w-5"
-            style={{ fill: "url(#firebase)" }}
+            style={{ fill: 'url(#firebase)' }}
           />
         ),
-        name: "Firebase",
+        name: 'Firebase',
       },
       {
         icon: (
           <SiDart
             key="dart"
             className="h-5 w-5"
-            style={{ fill: "url(#dart)" }}
+            style={{ fill: 'url(#dart)' }}
           />
         ),
-        name: "Dart",
+        name: 'Dart',
       },
     ],
   },
@@ -201,26 +192,18 @@ export const projects = [
 
 export const languages = [
   {
-    name: "Kotlin",
-    icon: (
-      <SiKotlin
-        className="size-20 text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
-    ),
+    name: 'Kotlin',
+    icon: <SiKotlin style={{ height: 20, width: 20, fill: 'url(#kotlin)' }} />,
   },
   {
-    name: "Dart",
-    icon: (
-      <SiDart className="text-neutral-300" style={{ height: 50, width: 30 }} />
-    ),
+    name: 'Dart',
+    icon: <SiDart style={{ height: 20, width: 20, fill: 'url(#dart)' }} />,
   },
   {
-    name: "Typescript",
+    name: 'Typescript',
     icon: (
       <SiTypescript
-        className="size-20 text-neutral-300"
-        style={{ height: 50, width: 30 }}
+        style={{ height: 20, width: 20, fill: 'url(#typescript)' }}
       />
     ),
   },
@@ -228,117 +211,81 @@ export const languages = [
 
 export const frameworks = [
   {
-    name: "JetPack",
+    name: 'JetPack',
     icon: (
       <SiJetpackcompose
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
+        style={{ height: 20, width: 20, fill: 'url(#jetpack)' }}
       />
     ),
   },
   {
-    name: "Flutter",
+    name: 'Flutter',
     icon: (
-      <SiFlutter
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
+      <SiFlutter style={{ height: 20, width: 20, fill: 'url(#flutter)' }} />
     ),
   },
   {
-    name: "React Native",
+    name: 'R-Native',
     icon: (
-      <SiReact className="text-neutral-300" style={{ height: 50, width: 30 }} />
+      <SiReact style={{ height: 20, width: 20, fill: 'url(#react-native)' }} />
     ),
   },
   {
-    name: "NextJS",
-    icon: (
-      <SiNextdotjs
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
-    ),
+    name: 'NextJS',
+    icon: <SiNextdotjs style={{ height: 20, width: 20 }} />,
   },
   {
-    name: "NestJS",
-    icon: (
-      <SiNestjs
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
-    ),
+    name: 'NestJS',
+    icon: <SiNestjs style={{ height: 20, width: 20, fill: 'url(#nestjs)' }} />,
   },
 ];
 
 export const databases = [
   {
-    name: "PostgreSQL",
+    name: 'PostgreSQL',
     icon: (
       <BiLogoPostgresql
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
+        style={{ height: 20, width: 20, fill: 'url(#postgresql)' }}
       />
     ),
   },
   {
-    name: "MySQL",
-    icon: (
-      <SiMysql className="text-neutral-300" style={{ height: 50, width: 30 }} />
-    ),
+    name: 'MySQL',
+    icon: <SiMysql style={{ height: 20, width: 20, fill: 'url(#mysql)' }} />,
   },
   {
-    name: "SQLite",
-    icon: (
-      <SiSqlite
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
-    ),
+    name: 'SQLite',
+    icon: <SiSqlite style={{ height: 20, width: 20, fill: 'url(#sqlite)' }} />,
   },
   {
-    name: "Firebase",
+    name: 'Firebase',
     icon: (
-      <SiFirebase
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
+      <SiFirebase style={{ height: 20, width: 20, fill: 'url(#firebase)' }} />
     ),
   },
 ];
 
 export const cloudTools = [
   {
-    name: "Cloudflare",
+    name: 'Cloudflare',
     icon: (
       <SiCloudflare
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
+        style={{ height: 20, width: 20, fill: 'url(#cloudflare)' }}
       />
     ),
   },
   {
-    name: "AWS",
-    icon: (
-      <SiAmazon
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
-    ),
+    name: 'AWS',
+    icon: <SiAmazon style={{ height: 20, width: 20, fill: 'url(#aws)' }} />,
   },
   {
-    name: "Git",
-    icon: (
-      <SiGit className="text-neutral-300" style={{ height: 50, width: 30 }} />
-    ),
+    name: 'Git',
+    icon: <SiGit style={{ height: 20, width: 20, fill: 'url(#git)' }} />,
   },
   {
-    name: "Google Cloud",
+    name: 'G-Cloud',
     icon: (
-      <SiGooglecloud
-        className="text-neutral-300"
-        style={{ height: 50, width: 30 }}
-      />
+      <SiGooglecloud style={{ height: 20, width: 20, fill: 'url(#g-cloud)' }} />
     ),
   },
 ];
