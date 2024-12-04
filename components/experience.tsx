@@ -1,22 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Projects from './projects';
-const experiences = [
-  {
-    company: 'Freelancer.',
-    position: 'Fullstack Developer',
-    period: 'July 2022 - Present',
-    description:
-      'Working on various projects using TypeScript, Kotlin, Dart and Java.',
-  },
-  {
-    company: 'IESA Instituto de Estudios Superiores Argentino',
-    position: 'FullStack Developer',
-    period: 'Mar 2024 - Present',
-    description:
-      'Developing various platforms to provide educational services on different devices, including web, virtual classroom, and mobile applications.',
-  },
-];
+import { experiences } from '@/constants/helpers';
 
 export default function Experience() {
   return (
@@ -50,7 +35,20 @@ export default function Experience() {
                   {exp.position}
                 </h3>
                 <p className="text-gray-400 mb-2">{exp.company}</p>
-                <p className="text-gray-300">{exp.description}</p>
+                <div className="text-gray-300">
+                  {exp.description?.map((element, idx) => (
+                    <div key={idx} className="mb-4">
+                      <p className="font-bold mb-2">{element.title}</p>
+                      <ul className="list-disc list-inside space-y-1">
+                        {element.subtitles.map((subtitle, sIdx) => (
+                          <li key={sIdx} className="ml-4">
+                            {subtitle.replace(/^- /, '')}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
