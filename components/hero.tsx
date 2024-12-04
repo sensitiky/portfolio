@@ -16,7 +16,7 @@ export default function Hero() {
               Mario Correa
             </h1>
             <p className="text-lg text-gray-300">
-              I'm a fullstack developer with a focus on mobile tech.
+    I'm a fullstack developer specializing in mobile technologies.
             </p>
             <p className="text-lg text-gray-300">
               Deeply passionate about technology, development, and minimalism.
