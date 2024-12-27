@@ -6,11 +6,21 @@ export const experiences = [
     description: [
       {
         title: 'Responsibilities',
-        subtitles: ['To be defined'],
+        subtitles: [
+          'Developing and maintaining web/mobile applications using TypeScript, and Dart.',
+          'Working closely with the design team to create user-friendly interfaces.',
+          'Ensuring code quality through regular code reviews and testing.',
+          'Providing technical support and troubleshooting issues.',
+        ],
       },
       {
         title: 'Implementations',
-        subtitles: ['To be defined'],
+        subtitles: [
+          'Successfully delivered multiple projects on time and within budget.',
+          'Improved application performance by optimizing code and implementing best practices.',
+          'Ensuring cross-platform compatibility and responsiveness.',
+          'Maintaining and updating existing applications to improve functionality.',
+        ],
       },
     ],
   },
