@@ -1,22 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Github, Linkedin } from 'lucide-react';
+import { Button } from './ui/button';
 
 export default function Hero() {
   return (
     <section className="flex items-center justify-start" id="Home">
-      <div className="grid gap-8 items-center">
+      <div className="grid gap-6 items-center">
         {/* Left content */}
         <div className="space-y-6 text-start order-2">
           <div className="space-y-2">
             <h2 className="text-sm text-purple-400 font-medium tracking-wider uppercase">
-            Full Stack Developer
+              Full Stack Developer
             </h2>
             <h1 className="font-bold text-2xl text-neutral-100 leading-tight">
               Mario Correa
             </h1>
             <p className="text-lg text-gray-300">
-    I'm a fullstack developer specializing in mobile technologies.
+              I'm a fullstack developer specializing in mobile technologies.
             </p>
             <p className="text-lg text-gray-300">
               Deeply passionate about technology, development, and minimalism.
@@ -43,19 +44,19 @@ export default function Hero() {
           </div>
           <div></div>
           <Link href="mailto:mariomcorrea3@gmail.com" target="_blank">
-            <p className="rounded-full text-gray-300 font-medium underline">
+            <Button className="bg-transparent text-lg hover:bg-transparent mr-6 text-gray-300 font-medium underline">
               Contact me
-            </p>
+            </Button>
           </Link>
           <Link href="CV-Correa Mario.pdf" target="_blank">
-            <p className="rounded-full text-gray-300 font-medium underline">
+            <Button className="bg-transparent text-lg hover:bg-transparent text-gray-300 font-medium underline">
               View Resume
-            </p>
+            </Button>
           </Link>
         </div>
 
         {/* Right content - Image */}
-        <div className="order-1 flex justify-start ">
+        <div className="order-1 flex justify-start">
           <div className="relative">
             <div className="size-[100px] rounded-full overflow-hidden">
               <Image
