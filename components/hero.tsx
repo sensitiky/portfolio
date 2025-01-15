@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="space-y-6 text-start order-2">
           <div className="space-y-2">
             <h2 className="text-sm text-purple-400 font-medium tracking-wider uppercase">
-              Mobile Developer
+            Full Stack Developer
             </h2>
             <h1 className="font-bold text-2xl text-neutral-100 leading-tight">
               Mario Correa
