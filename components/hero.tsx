@@ -11,13 +11,13 @@ export default function Hero() {
         <div className="space-y-6 text-start order-2">
           <div className="space-y-2">
             <h2 className="text-sm text-purple-400 font-medium tracking-wider uppercase">
-              Full Stack Developer
+              Backend Developer
             </h2>
             <h1 className="font-bold text-2xl text-neutral-100 leading-tight">
               Mario Correa
             </h1>
             <p className="text-lg text-gray-300">
-              I'm a fullstack developer specializing in mobile technologies.
+              I'm a backend developer specializing in microservices.
             </p>
             <p className="text-lg text-gray-300">
               Deeply passionate about technology, development, and minimalism.
@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="relative">
             <div className="size-[100px] rounded-full overflow-hidden">
               <Image
-                src="/Mario.webp"
+                src="/Mario.jpg"
                 width={1920}
                 height={1080}
                 alt="Mario Picture"
