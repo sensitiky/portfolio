@@ -7,9 +7,11 @@ export const experiences = [
       {
         title: 'Responsibilities',
         subtitles: [
-          'Development and maintenance of microservices and monolithic applications using TypeScript and Java.',
-          'Microservices development using NestJS with TypeScript and Java with Spring Boot.',
-          'Migration and refactoring of legacy microservices in Java & Spring Boot to NestJS with TypeScript.',
+          'Development and implementation of new functionalities in microservices using Java & Spring Boot.',
+          'Development and implementation of functionalities in mobile applications using Flutter.',
+          'Migration and refactoring of legacy microservices in Java & Spring Boot & Typescript with NodeJS/NestJS.',
+          'Refactoring and optimizing code in both backend and frontend to improve maintainability and performance.',
+          'Participation in architecture and scalability decisions.',
           'Ensure code quality through regular code reviews and testing.',
           'Improve application performance by optimizing code and implementing best practices.',
         ],
