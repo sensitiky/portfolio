@@ -1,28 +1,80 @@
 'use client';
-import Contact from '@/components/contact';
+
 import Experience from '@/components/experience';
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Skills from '@/components/skills';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [cursorVariant, setCursorVariant] = useState('default');
+
+  useEffect(() => {
+    const mouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener('mousemove', mouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      opacity: 0.5,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: 'rgba(147, 51, 234, 0.1)',
+      mixBlendMode: 'difference' as const,
+      opacity: 0.8,
+    },
+  };
+
+  const textEnter = () => setCursorVariant('text');
+  const textLeave = () => setCursorVariant('default');
+
   return (
-    <div className="min-h-screen bg-[#090909] flex justify-center">
-      <div className="w-full max-w-4xl p-4 md:p-14 grid gap-8">
+    <div className="min-h-screen bg-background text-foreground relative">
+      {/* Custom cursor */}
+      <motion.div
+        className="custom-cursor hidden md:block fixed top-0 left-0 w-8 h-8 rounded-full bg-primary/50 pointer-events-none z-50"
+        variants={variants}
+        animate={cursorVariant}
+        transition={{ type: 'spring', stiffness: 500, damping: 28 }}
+      />
+
+      <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
         <Header />
-        <main className="grid gap-8">
-          <Hero />
+        <main className="grid gap-0">
+          <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
+            <Hero />
+          </div>
           <Skills />
           <Experience />
-          <Contact />
         </main>
+        <Footer />
       </div>
+
       {/* SVG Gradients */}
       <svg width="0" height="0">
         <defs>
-          <linearGradient id="kotlin" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#A97BFF" offset="0%" />
-            <stop stopColor="#6C4AB6" offset="100%" />
+          <linearGradient id="java" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop stopColor="#007396" offset="0%" />
+            <stop stopColor="#005175" offset="100%" />
           </linearGradient>
           <linearGradient id="react-native" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop stopColor="#00d8ff" offset="0%" />
@@ -33,8 +85,8 @@ export default function Home() {
             <stop stopColor="#34ba61" offset="100%" />
           </linearGradient>
           <linearGradient id="nextjs" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop stopColor="#000000" offset="0%" />
-            <stop stopColor="#333333" offset="100%" />
+            <stop stopColor="#FFFFFF" offset="0%" />
+            <stop stopColor="#000000" offset="100%" />
           </linearGradient>
           <linearGradient id="nestjs" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop stopColor="#E0234E" offset="0%" />

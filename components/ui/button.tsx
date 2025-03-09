@@ -18,13 +18,11 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        gradientBorder:
-          'bg-black hover:translate-x-[1px] shadow-md shadow-white hover:translate-y-[-1px] border-2 border-transparent bg-clip-border',
       },
       size: {
-        default: 'h-10 py-2',
-        sm: 'h-9 rounded-md',
-        lg: 'h-11 rounded-md ',
+        default: 'h-10 px-4 py-2',
+        sm: 'h-9 rounded-md px-3',
+        lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
       },
     },
@@ -46,13 +44,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }), {
-          'border-image-source':
-            variant === 'gradientBorder'
-              ? 'linear-gradient(to right, #fafafa, #737373) '
-              : '',
-          'border-image-slice': variant === 'gradientBorder' ? '1' : '',
-        })}
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />

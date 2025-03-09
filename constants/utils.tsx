@@ -1,7 +1,6 @@
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { FaJava, FaNodeJs } from 'react-icons/fa';
 import {
-  SiKotlin,
   SiNestjs,
   SiTypescript,
   SiCloudflare,
@@ -14,6 +13,8 @@ import {
   SiFirebase,
   SiQuarkus,
   SiSpringboot,
+  SiGo,
+  SiNextdotjs,
 } from 'react-icons/si';
 
 export const languages = [
@@ -27,25 +28,27 @@ export const languages = [
   },
   {
     name: 'Java',
-    icon: <FaJava style={{ height: 20, width: 20 }} />,
+    icon: <FaJava style={{ height: 20, width: 20, fill: 'url(#java)' }} />,
   },
   {
-    name: 'Kotlin',
-    icon: <SiKotlin style={{ height: 20, width: 20, fill: 'url(#kotlin)' }} />,
+    name: 'Go',
+    icon: (
+      <SiGo style={{ height: 20, width: 20, fill: 'url(#react-native)' }} />
+    ),
   },
 ];
 
 export const frameworks = [
   {
-    name: 'React',
+    name: 'React/React Native',
     icon: (
       <SiReact style={{ height: 20, width: 20, fill: 'url(#react-native)' }} />
     ),
   },
   {
-    name: 'R-Native',
+    name: 'NextJS',
     icon: (
-      <SiReact style={{ height: 20, width: 20, fill: 'url(#react-native)' }} />
+      <SiNextdotjs style={{ height: 20, width: 20, fill: 'url(#nextjs)' }} />
     ),
   },
   {
@@ -55,10 +58,6 @@ export const frameworks = [
   {
     name: 'NodeJS',
     icon: <FaNodeJs style={{ height: 20, width: 20, fill: 'green' }} />,
-  },
-  {
-    name: 'Quarkus',
-    icon: <SiQuarkus style={{ height: 20, width: 20 }} />,
   },
   {
     name: 'Spring',
